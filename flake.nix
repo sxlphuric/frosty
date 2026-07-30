@@ -1,19 +1,17 @@
 {
   description = "My NixOS Flake";
 
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    let
-      makeNixPkgsInput = url: {
-        url = url;
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
-    in
-    {
-    home-manager = (makeNixPkgsInput "github:nix-community/home-manager");
-    nix4nvchad = (makeNixPkgsInput "github:nix-community/nix4nvchad");
-    }
-  };
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  let
+    makeNixPkgsInput = url: {
+      url = url;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  in
+    inputs = {
+      home-manager = (makeNixPkgsInput "github:nix-community/home-manager");
+      nix4nvchad = (makeNixPkgsInput "github:nix-community/nix4nvchad");
+    };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
