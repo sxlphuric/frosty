@@ -5,6 +5,7 @@
 
     ./programs/starship.nix
     ./programs/shells.nix
+    ./programs/zed-editor.nix
   ];
 
   home.stateVersion = "26.05";
@@ -31,12 +32,4 @@
 
   };
 
-  programs.zed-editor = {
-    enable = true;
-
-    extraPackages = with pkgs; [
-      nil
-      nixd
-    ];
-  };
 }
