@@ -2,11 +2,13 @@
 
   imports = [
     inputs.nix4nvchad.homeManagerModules.default
+    inputs.zen-browser.homeModules.twilight
 
     ./programs/starship.nix
     ./programs/shells.nix
     ./programs/kitty.nix
     ./programs/zed-editor.nix
+    ./programs/zen-browser.nix
   ];
 
   home.stateVersion = "26.05";

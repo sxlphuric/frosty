@@ -11,6 +11,11 @@
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nix4nvchad, ... }@inputs: {
@@ -19,9 +24,9 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          
+
           home-manager.nixosModules.home-manager
-          
+
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

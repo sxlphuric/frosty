@@ -78,7 +78,31 @@
       "inputs": {
         "home-manager": "home-manager",
         "nix4nvchad": "nix4nvchad",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "zen-browser": "zen-browser"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785442452,
+        "narHash": "sha256-wrNN6+P34Pr06Oe1itNsk3HCLGkqj1bPa7+HLrEf7wg=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "59f343c80c4143a3c12ae6c74a6268fd8aaf102c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "type": "github"
       }
     }
   },
