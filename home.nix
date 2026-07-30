@@ -12,7 +12,8 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
-
+    nerd-fonts.jetbrains-mono
+    maple-mono.NF-unhinted
   ];
 
   programs.git = {
