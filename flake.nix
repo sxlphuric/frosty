@@ -9,8 +9,10 @@
         inputs.nixpkgs.follows = "nixpkgs";
       };
     in
+    {
     home-manager = (makeNixPkgsInput "github:nix-community/home-manager");
     nix4nvchad = (makeNixPkgsInput "github:nix-community/nix4nvchad");
+    }
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
