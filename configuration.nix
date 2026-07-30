@@ -96,6 +96,20 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = true;
+      };
+      Policy = {
+        AutoEnable = true;
+      };
+    };
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
