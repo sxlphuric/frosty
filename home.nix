@@ -30,5 +30,5 @@
 
   programs.zed = {
     enable = true;
-  }
+  };
 }
