@@ -106,6 +106,7 @@
      libreoffice-qt
      kitty
      git
+     mpv
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
