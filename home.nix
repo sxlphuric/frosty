@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ pkgs, inputs, ...}: {
   
   imports = [
     inputs.nix4nvchad.homeManagerModules.default
