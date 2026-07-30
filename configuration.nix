@@ -66,17 +66,18 @@
   # Define user accounts. Don't forget to set a password with ‘passwd’.
   users.users = 
     let
-      makeUser = description: extraGroups: packages: {
+      makeUser = description: extraGroups: packages: shell: {
         isNormalUser = true;
         description = description;
         extraGroups = (extraGroups ++ [ "networkmanager" ]);
         packages = packages;
+        shell = shell;
       };
     in
     {
-      "admin" = (makeUser "John Admin" ["wheel"] [ pkgs.wireshark ]);
-      "mushroom" = (makeUser "Sulphuric" ["wheel"] []);
-      "tung" = (makeUser "Triple T Sahur" [] [ pkgs.supertux ]);
+      "admin" = (makeUser "John Admin" ["wheel"] [ pkgs.wireshark ] pkgs.bash);
+      "mushroom" = (makeUser "Sulphuric" ["wheel"] [] pkgs.fish);
+      "tung" = (makeUser "Triple T Sahur" [] [ pkgs.supertux ] pkgs.bash);
     };
 
   # Programs (these are installed and CONFIGURED by nix and given bindings so you can configure them straight in the config.nix)
@@ -85,6 +86,8 @@
 
   programs.niri.enable = false;
   programs.dms-shell.enable = false;
+
+  programs.fish.enable = true;
 
 
   # Allow unfree packages
