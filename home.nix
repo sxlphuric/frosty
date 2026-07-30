@@ -28,7 +28,7 @@
 
   };
 
-  programs.zed = {
+  programs.zed-editor = {
     enable = true;
   };
 }
