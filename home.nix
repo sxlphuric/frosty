@@ -1,9 +1,9 @@
 { pkgs, inputs, ...}: {
-  
+
   imports = [
     inputs.nix4nvchad.homeManagerModules.default
   ];
-  
+
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
@@ -30,5 +30,10 @@
 
   programs.zed-editor = {
     enable = true;
+
+    extraPackages = with pkgs; [
+      nil
+      nixd
+    ];
   };
 }
