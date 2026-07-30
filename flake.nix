@@ -1,16 +1,12 @@
-let
-    makeNixPkgsInput = url: {
-      url = url;
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-in
 {
   description = "My NixOS Flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager = (makeNixPkgsInput "github:nix-community/home-manager");
-    nix4nvchad = (makeNixPkgsInput "github:nix-community/nix4nvchad");
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
