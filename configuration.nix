@@ -90,6 +90,13 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
 
+
+  programs.gamemode.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+  };
+
   environment.shells = [ pkgs.zsh ];
 
 
