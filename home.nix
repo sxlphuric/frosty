@@ -2,6 +2,8 @@
 
   imports = [
     inputs.nix4nvchad.homeManagerModules.default
+
+    ./programs/starship.nix
   ];
 
   home.stateVersion = "26.05";
