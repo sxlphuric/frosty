@@ -3,7 +3,7 @@
     enable = true;
     interactiveShellInit = ''
       set fish_greeting
-      starship init fish | source
     '';
   };
+  programs.zsh.enable = true;
 }

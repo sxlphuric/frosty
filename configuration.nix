@@ -64,20 +64,20 @@
   # services.xserver.libinput.enable = true;
 
   # Define user accounts. Don't forget to set a password with ‘passwd’.
-  users.users = 
+  users.users =
     let
-      makeUser = description: extraGroups: packages: shell: {
+      makeUser = description: extraGroups: packages: {
         isNormalUser = true;
         description = description;
         extraGroups = (extraGroups ++ [ "networkmanager" ]);
         packages = packages;
-        shell = shell;
+        shell = pkgs.zsh;
       };
     in
     {
-      "admin" = (makeUser "John Admin" ["wheel"] [ pkgs.wireshark ] pkgs.bash);
-      "mushroom" = (makeUser "Sulphuric" ["wheel"] [] pkgs.fish);
-      "tung" = (makeUser "Triple T Sahur" [] [ pkgs.supertux ] pkgs.bash);
+      "admin" = (makeUser "John Admin" ["wheel"] [ pkgs.wireshark ]);
+      "mushroom" = (makeUser "Sulphuric" ["wheel"] []);
+      "tung" = (makeUser "Triple T Sahur" [] [ pkgs.supertux ]);
     };
 
   # Programs (these are installed and CONFIGURED by nix and given bindings so you can configure them straight in the config.nix)
@@ -88,6 +88,9 @@
   programs.dms-shell.enable = false;
 
   programs.fish.enable = true;
+  programs.zsh.enable = true;
+
+  environment.shells = [ pkgs.zsh ];
 
 
   # Allow unfree packages
@@ -131,7 +134,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
-  
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 }

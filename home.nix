@@ -4,7 +4,7 @@
     inputs.nix4nvchad.homeManagerModules.default
 
     ./programs/starship.nix
-    ./programs/fish.nix
+    ./programs/shells.nix
   ];
 
   home.stateVersion = "26.05";
