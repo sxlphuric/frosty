@@ -5,6 +5,7 @@
 
     ./programs/starship.nix
     ./programs/shells.nix
+    ./programs/kitty.nix
     ./programs/zed-editor.nix
   ];
 
