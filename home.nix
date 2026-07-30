@@ -27,4 +27,8 @@
     ];
 
   };
+
+  programs.zed = {
+    enable = true;
+  }
 }
