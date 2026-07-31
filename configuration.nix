@@ -5,11 +5,11 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./networking.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./networking.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -75,9 +75,9 @@
       };
     in
     {
-      "admin" = (makeUser "John Admin" ["wheel"] [ pkgs.wireshark ]);
-      "mushroom" = (makeUser "Sulphuric" ["wheel"] []);
-      "tung" = (makeUser "Triple T Sahur" [] [ pkgs.supertux ]);
+      "admin" = (makeUser "John Admin" [ "wheel" ] [ pkgs.wireshark ]);
+      "mushroom" = (makeUser "Sulphuric" [ "wheel" ] [ ]);
+      "tung" = (makeUser "Triple T Sahur" [ ] [ pkgs.supertux ]);
     };
 
   # Programs (these are installed and CONFIGURED by nix and given bindings so you can configure them straight in the config.nix)
@@ -97,7 +97,6 @@
   };
 
   environment.shells = [ pkgs.zsh ];
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -121,13 +120,13 @@
 
   # Packages (these are just installed, no preconfiguration
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-     libreoffice-qt
-     kitty
-     git
-     mpv
-     most
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    libreoffice-qt
+    kitty
+    git
+    mpv
+    most
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -157,7 +156,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   security.sudo.enable = false;
   security.sudo-rs = {
