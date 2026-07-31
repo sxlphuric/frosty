@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   programs.zed-editor = {
     enable = true;
 
@@ -11,7 +11,7 @@
     userSettings = {
       terminal = {
         dock = "right";
-        shell.program = "${pkgs.fish}/bin/fish";
+        shell.program = (lib.getExe pkgs.fish);
       };
       git_panel = {
         dock = "left";
