@@ -14,6 +14,7 @@
   home.stateVersion = "26.05";
 
   fonts.fontconfig.enable = true;
+  xdg.enable = true;
 
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
