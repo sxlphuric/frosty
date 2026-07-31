@@ -1,0 +1,10 @@
+[
+  {
+    "label": "NixOS Flakes: Rebuild and replace",
+    "command": "sudo nixos-rebuild switch --flake ."
+  },
+  {
+    "label": "NixOS Flakes: Stage changes, rebuild and replace",
+    "command": "git add .; sudo nixos-rebuild switch --flake ."
+  },
+]
