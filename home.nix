@@ -23,6 +23,7 @@
     maple-mono.NF-unhinted
 
     prismlauncher
+    supertuxkart
   ];
 
   # TODO add the github helper (gh)
