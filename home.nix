@@ -23,6 +23,8 @@
     prismlauncher
   ];
 
+  # TODO add the github helper (gh)
+
   programs.git = {
     enable = true;
     settings.user = {
@@ -30,6 +32,8 @@
       email = "rnssaketo@proton.me";
     };
   };
+
+  # TODO port nvchad config
 
   programs.nvchad = {
     enable = true;
