@@ -129,6 +129,7 @@
     most
     awatcher
     aw-server-rust
+    ticktick
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
