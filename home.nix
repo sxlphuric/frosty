@@ -9,6 +9,8 @@
     ./programs/kitty.nix
     ./programs/zed-editor.nix
     ./programs/zen-browser.nix
+
+    ./services.user/activitywatch.nix
   ];
 
   home.stateVersion = "26.05";

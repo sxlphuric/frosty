@@ -127,6 +127,8 @@
     git
     mpv
     most
+    awatcher
+    aw-server-rust
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
