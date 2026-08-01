@@ -24,6 +24,8 @@
 
     prismlauncher
     supertuxkart
+
+    kdePackages.filelight
   ];
 
   # TODO add the github helper (gh)
