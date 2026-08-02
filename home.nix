@@ -27,6 +27,9 @@
     supertuxkart
 
     kdePackages.filelight
+    equibop
+
+    inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   # TODO port nvchad config
