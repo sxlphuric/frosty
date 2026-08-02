@@ -81,7 +81,6 @@
     };
 
   # Programs (these are installed and CONFIGURED by nix and given bindings so you can configure them straight in the config.nix)
-  programs.firefox.enable = true;
   programs.vim.enable = true;
 
   programs.niri.enable = false;
