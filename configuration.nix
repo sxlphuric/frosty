@@ -129,6 +129,8 @@
     awatcher
     aw-server-rust
     ticktick
+    kdePackages.filelight
+    kdePackages.kclock
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
