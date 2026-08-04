@@ -4,18 +4,18 @@
     inputs.nix4nvchad.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
 
-    ./programs/starship.nix
-    ./programs/shells.nix
-    ./programs/kitty.nix
-    ./programs/zed-editor.nix
-    ./programs/zen-browser.nix
-    ./programs/git.nix
-    ./programs/cava.nix
-    ./programs/fastfetch.nix
-    ./programs/obsidian.nix
-    ./programs/nvchad.nix
+    ./user/programs/starship.nix
+    ./user/programs/shells.nix
+    ./user/programs/kitty.nix
+    ./user/programs/zed-editor.nix
+    ./user/programs/zen-browser.nix
+    ./user/programs/git.nix
+    ./user/programs/cava.nix
+    ./user/programs/fastfetch.nix
+    ./user/programs/obsidian.nix
+    ./user/programs/nvchad.nix
 
-    ./services.user/activitywatch.nix
+    ./user/services/activitywatch.nix
   ];
 
   home.stateVersion = "26.05";
