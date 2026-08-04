@@ -1,5 +1,5 @@
 {
-  # config this (transfer the config)
+  # TODO config this (transfer the config)
   programs.obsidian = {
     enable = true;
   };
