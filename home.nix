@@ -12,6 +12,7 @@
     ./programs/git.nix
     ./programs/cava.nix
     ./programs/fastfetch.nix
+    ./programs/obsidian.nix
 
     ./services.user/activitywatch.nix
   ];
@@ -29,6 +30,7 @@
     supertuxkart
 
     equibop
+    kew
 
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
