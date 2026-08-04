@@ -18,6 +18,13 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 6*1024;
+    }
+  ];
+
   networking.hostName = "nixfx"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
