@@ -2,7 +2,7 @@
   programs.starship = {
     enable = true;
     settings = {
-      format = "$directory$git_branch$git_status$c$elixir$elm$golang$gradle$haskell$java$julia$nodejs$nim$rust$scala[](fg:#06969A)$docker_context[](fg:#33658A)$time[](fg:#33658A)[-](#D60270)[-](#9B4F96)[> ](#0038A8)";
+      format = "$directory$nix_shell$git_branch$git_status$c$elixir$elm$golang$gradle$haskell$java$julia$nodejs$nim$rust$scala[](fg:#06969A)$docker_context[](fg:#33658A)$time[](fg:#33658A)[-](#D60270)[-](#9B4F96)[> ](#0038A8)";
 
       # Disable the blank line at the start of the prompt
       # add_newline = false
@@ -149,6 +149,14 @@
         style = "#De3423";
         format = "[ $symbol ]($style)";
       };
+
+      nix_shell = {
+        symbol = "󱄅 ";
+        # heuristic = true; Son ts broken
+        disabled = true;
+        style = "#004d89";
+        format = "[ $symbol$state( ($name))]($style)";
+      }; # the module only works with nix-shell...
 
       time = {
         disabled = false;
