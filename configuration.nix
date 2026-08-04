@@ -95,6 +95,8 @@
     remotePlay.openFirewall = true;
   };
 
+  programs.gpu-screen-recorder.enable = true;
+
   environment.shells = [ pkgs.zsh ];
 
   # Allow unfree packages
@@ -131,6 +133,7 @@
     ticktick
     kdePackages.filelight
     kdePackages.kclock
+    gpu-screen-recorder-gtk
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
