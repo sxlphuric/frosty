@@ -3,6 +3,7 @@
     enable = true;
     interactiveShellInit = ''
       set fish_greeting
+      fastfetch
     '';
   };
   programs.zsh.enable = true;

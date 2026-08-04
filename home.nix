@@ -11,6 +11,7 @@
     ./programs/zen-browser.nix
     ./programs/git.nix
     ./programs/cava.nix
+    ./programs/fastfetch.nix
 
     ./services.user/activitywatch.nix
   ];
