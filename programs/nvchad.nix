@@ -4,6 +4,8 @@
     extraPackages = with pkgs; [
       ripgrep
       fd
+      cargo
+      rustc
     ];
   };
 }
