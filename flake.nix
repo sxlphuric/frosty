@@ -7,9 +7,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvchad-config = {
+      url = "path:/home/mushroom/neovim";
+      flake = false;
+    };
     nix4nvchad = {
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nvchad-starter.follows = "nvchad-config";
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

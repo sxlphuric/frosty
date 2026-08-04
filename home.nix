@@ -13,6 +13,7 @@
     ./programs/cava.nix
     ./programs/fastfetch.nix
     ./programs/obsidian.nix
+    ./programs/nvchad.nix
 
     ./services.user/activitywatch.nix
   ];
@@ -34,17 +35,4 @@
 
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
-
-  # TODO port nvchad config
-
-  programs.nvchad = {
-    enable = true;
-
-    extraPackages = with pkgs; [
-      ripgrep
-      fd
-    ];
-
-  };
-
 }
