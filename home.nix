@@ -1,9 +1,4 @@
 {
-  pkgs,
-  inputs,
-  ...
-}:
-{
   imports = [
     ./user/services.nix
     ./user/programs.nix
