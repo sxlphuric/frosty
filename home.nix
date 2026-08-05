@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }: {
-
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.nix4nvchad.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight

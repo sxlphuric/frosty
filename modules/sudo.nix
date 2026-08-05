@@ -4,15 +4,15 @@
     enable = true;
     extraRules = [
       {
-        users = [ "mushroom" ];
+        users = ["mushroom"];
         commands = [
           {
             command = "/run/current-system/sw/bin/nixos-rebuild";
-            options = [ "NOPASSWD" ];
+            options = ["NOPASSWD"];
           }
           {
             command = "/etc/profiles/per-user/mushroom/bin/nixos-rebuild";
-            options = [ "NOPASSWD" ];
+            options = ["NOPASSWD"];
           }
         ];
       }

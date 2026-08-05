@@ -1,4 +1,8 @@
-{ pkgs, lib, ... }: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.zed-editor = {
     enable = true;
 
@@ -11,15 +15,15 @@
     userSettings = {
       terminal = {
         dock = "right";
-        shell.program = (lib.getExe pkgs.fish);
+        shell.program = lib.getExe pkgs.fish;
       };
       git_panel = {
         dock = "left";
       };
       agent = {
         dock = "right";
-        favorite_models = [ ];
-        model_parameters = [ ];
+        favorite_models = [];
+        model_parameters = [];
       };
       project_panel = {
         dock = "left";
@@ -33,7 +37,6 @@
         light = "Ayu Light";
         dark = "Ayu Dark";
       };
-
     };
   };
 }

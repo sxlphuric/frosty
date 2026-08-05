@@ -2,7 +2,6 @@
 # it imports modules
 # and you have to edit the modules instead ahahahah
 # you can also add more if u want
-
 {
   imports = [
     # Include the results of the hardware scan.
@@ -18,7 +17,6 @@
     ./modules/services.nix
     ./modules/programs.nix
   ];
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
