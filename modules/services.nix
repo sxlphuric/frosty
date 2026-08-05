@@ -1,6 +1,7 @@
 {
   imports = [
     # ./services/syncthing.nix
+    ./services/tailscale.nix
   ];
   # List services that you want to enable:
   #
