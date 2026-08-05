@@ -9,6 +9,7 @@
 
     ./modules/boot.nix
     ./modules/hardware.nix
+    ./modules/firewall.nix
     ./modules/networking.nix
     ./modules/users.nix
     ./modules/userland.nix
