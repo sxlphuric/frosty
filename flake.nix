@@ -27,24 +27,32 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix4nvchad, ... }@inputs: {
-    nixosConfigurations = {
-      nixfx = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nix4nvchad,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations = {
+        nixfx = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./configuration.nix
 
-          home-manager.nixosModules.home-manager
+            home-manager.nixosModules.home-manager
 
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs;};
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
 
-            home-manager.users.mushroom.imports = [./home.nix];
-          }
-        ];
+              home-manager.users.mushroom.imports = [ ./home.nix ];
+            }
+          ];
+        };
       };
     };
-  };
 }
