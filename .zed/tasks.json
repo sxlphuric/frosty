@@ -7,4 +7,8 @@
     "label": "NixOS Flakes: Stage changes, rebuild and replace",
     "command": "git add .; sudo nixos-rebuild switch --flake ."
   },
+  {
+    "label": "Alejandra: Format all",
+    "command": "nix run nixpkgs#alejandra ."
+  }
 ]
