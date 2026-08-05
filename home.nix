@@ -8,5 +8,4 @@
 
   fonts.fontconfig.enable = true;
   xdg.enable = true;
-
 }
