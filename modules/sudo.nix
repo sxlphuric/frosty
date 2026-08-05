@@ -13,7 +13,6 @@
         in [
           (passwordlessCommand "/run/current-system/sw/bin/nixos-rebuild")
           (passwordlessCommand "/run/current-system/sw/bin/nix-collect-garbage")
-          (passwordlessCommand "/run/current-system/sw/bin/nix flake update")
         ];
       }
     ];
