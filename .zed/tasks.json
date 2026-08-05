@@ -10,5 +10,13 @@
   {
     "label": "Alejandra: Format all",
     "command": "nix run nixpkgs#alejandra ."
+  },
+  {
+    "label": "NixOS: Collect garbage",
+    "command": "sudo nix-collect-garbage"
+  },
+  {
+    "label": "NixOS Flakes: Update inputs",
+    "command": "sudo nix flake update"
   }
 ]
