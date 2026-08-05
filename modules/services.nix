@@ -1,6 +1,6 @@
 {
   imports = [
-    ./services/syncthing.nix
+  # ./services/syncthing.nix
   ];
   # List services that you want to enable:
   #

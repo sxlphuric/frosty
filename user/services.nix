@@ -1,6 +1,6 @@
 {
   imports = [
     ./services/activitywatch.nix
-    ./services/syncthing.nix
+  # ./services/syncthing.nix
   ];
 }
