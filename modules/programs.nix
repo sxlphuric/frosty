@@ -37,6 +37,7 @@
     kdePackages.kclock
     gpu-screen-recorder-gtk
     kdePackages.kdeconnect-kde
+    qalculate-qt
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
