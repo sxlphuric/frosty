@@ -5,15 +5,15 @@
     extraRules = [
       {
         users = ["mushroom"];
-        commands = [
-          {
-            command = "/run/current-system/sw/bin/nixos-rebuild";
+        commands = let
+          passwordlessCommand = command: {
+            command = command;
             options = ["NOPASSWD"];
-          }
-          {
-            command = "/etc/profiles/per-user/mushroom/bin/nixos-rebuild";
-            options = ["NOPASSWD"];
-          }
+          };
+        in [
+          (passwordlessCommand "/run/current-system/sw/bin/nixos-rebuild")
+          (passwordlessCommand "/run/current-system/sw/bin/nix-collect-garbage")
+          (passwordlessCommand "/run/current-system/sw/bin/nix flake update")
         ];
       }
     ];
