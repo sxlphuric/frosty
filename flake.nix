@@ -26,6 +26,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix.url = "github:ryantm/agenix";
+    obsidian-extensions = {
+      url = "github:karaolidis/nix-obsidian-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -34,13 +38,14 @@
     home-manager,
     nix4nvchad,
     agenix,
+    obsidian-extensions,
     ...
   } @ inputs: {
     nixosConfigurations = {
       nixfx = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
-        modules = [
+               modules = [
           ./configuration.nix
           agenix.nixosModules.default
 
@@ -52,6 +57,11 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
 
             home-manager.users.mushroom.imports = [./home.nix];
+
+
+            nixpkgs.overlays = [
+                     inputs.obsidian-extensions.overlays.default
+                   ];
           }
         ];
       };

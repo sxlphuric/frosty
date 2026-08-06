@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.obsidian = {
     enable = true;
 
@@ -13,6 +13,21 @@
       app = {
         alwaysUpdateLinks = true;
       };
+      communityPlugins = with pkgs.obsidianPlugins; [
+        emoji-shortcodes
+        obsidian-discordrpc
+        obsidian-excalidraw-plugin
+        obsidian-icon-folder
+        obsidian-kanban
+        obsidian-minimal-settings
+        obsidian-style-settings
+        obsidian-tasks-plugin
+        omnisearch
+        tickticksync
+      ];
+      themes = with pkgs.obsidianThemes; [
+        minimal
+      ];
       corePlugins = [
         "file-explorer"
         "global-search"
