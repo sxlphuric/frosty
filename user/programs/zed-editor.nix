@@ -7,13 +7,32 @@
     enable = true;
 
     extraPackages = with pkgs; [
-      nil
       nixd
       alejandra
     ];
 
     mutableUserSettings = false;
     userSettings = {
+      languages = {
+        Nix = {
+          language_servers = ["nixd"];
+          "formatter" = {
+            external = {
+              command = "alejandra";
+              arguments = ["--quiet" "-"];
+            };
+          };
+        };
+      };
+      lsp = {
+        nixd.settings.nixd = {
+          nixpkgs.expr = "import (builtins.getFlake \"/home/mushroom/nixos-config\").inputs.nixpkgs { }";
+          options = {
+            nixos.expr = "(builtins.getFlake \"/home/mushroom/nixos-config\").nixosConfigurations.nixfx.options";
+            home-manager.expr = "(builtins.getFlake \"/home/mushroom/nixos-config\").homeConfigurations.mushroom.options";
+          };
+        };
+      };
       terminal = {
         dock = "right";
         shell.program = lib.getExe pkgs.fish;
