@@ -10,21 +10,20 @@
       device = "nodev";
       useOSProber = false;
 
-      extraEntriesBeforeNixOS = true;
       extraEntries = let
-        createLinuxGrubEntry = { name, path }: ''
+        createLinuxGrubEntry = { name, path, shim ? false }: ''
           menuentry "${name}" {
             insmod part_gpt
             insmod fat
 
-            search --no-floppy --set=root <ESP-FS-UUID>
-            chainloader ${path}/grubx64.efi
+            search --no-floppy --fs-uuid --set=esp D2DA-0FFB
+            chainloader (esp)${path}/${if shim then "shim.efi" else "grubx64.efi"}
           }
         '';
       in ''
-        ${createLinuxGrubEntry { name = "OpenSUSE Tumbleweed Bootloader"; path = "/EFI/opensuse"; }}
+        ${createLinuxGrubEntry { name = "OpenSUSE Tumbleweed Bootloader"; path = "/EFI/opensuse"; shim = true; }}
         ${createLinuxGrubEntry { name = "EndeavourOS Bootloader"; path = "/EFI/endeavouros"; }}
-      '';
+        '';
     };
   };
 
