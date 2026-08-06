@@ -9,6 +9,7 @@
     extraPackages = with pkgs; [
       nil
       nixd
+      alejandra
     ];
 
     mutableUserSettings = false;
