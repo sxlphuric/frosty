@@ -1,4 +1,4 @@
-{config,...}: {
+{config, ...}: {
   age.secrets.syncthing.file = ../../secrets/syncthingPassword.age;
   services.syncthing = {
     enable = true;

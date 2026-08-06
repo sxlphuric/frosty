@@ -12,10 +12,10 @@
     syncthingUDPDiscoveryPort = 21027;
   in {
     # Open ports in the firewall.
-    allowedTCPPorts = [ syncthingSyncPort ];
-    allowedUDPPorts = [ syncthingSyncPort syncthingUDPDiscoveryPort ];
+    allowedTCPPorts = [syncthingSyncPort];
+    allowedUDPPorts = [syncthingSyncPort syncthingUDPDiscoveryPort];
 
-    trustedInterfaces = [ tailscaleInterface ];
+    trustedInterfaces = [tailscaleInterface];
 
     allowedTCPPortRanges = kdeConnectPortRanges;
     allowedUDPPortRanges = kdeConnectPortRanges;
