@@ -11,7 +11,7 @@ age.secrets.<name> = {
   file = "./secrets/<filename>.age";
   owner = "<owner>"; # Only in NixOS config! (not Home Manager)
   group = "<group>"; # Only in NixOS config! (not Home Manager)
-  mode = "<chmod mode>"; # Only in NixOS config! (not Home Manager)j
+  mode = "<chmod mode>"; 
 }
 services.someService = {
   auth = {
@@ -29,6 +29,6 @@ age.secrets.name = {
   path = "<path>"; # This is where the credential will end up after it is generated
   owner = "<owner>"; # Only in NixOS config! (not Home Manager)
   group = "<group>"; # Only in NixOS config! (not Home Manager)
-  mode = "<chmod mode>"; # Only in NixOS config! (not Home Manager)
+  mode = "<chmod mode>"; 
 }
 ```
