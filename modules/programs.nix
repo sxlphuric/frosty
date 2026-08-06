@@ -47,6 +47,7 @@
     kdePackages.kdeconnect-kde
     qalculate-qt
     inputs.agenix.packages."${stdenv.hostPlatform.system}".default
+    vinegar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
