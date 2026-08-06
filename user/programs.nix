@@ -6,6 +6,7 @@
   imports = [
     inputs.nix4nvchad.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
+    inputs.agenix.homeManagerModules.default
 
     ./programs/starship.nix
     ./programs/shells.nix

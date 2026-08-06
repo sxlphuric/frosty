@@ -25,6 +25,7 @@
       url = "github:AlvaroParker/helium-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix.url = "github:ryantm/agenix";
   };
 
   outputs = {
@@ -32,6 +33,7 @@
     nixpkgs,
     home-manager,
     nix4nvchad,
+    agenix,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -39,6 +41,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          agenix.nixosModules.default
 
           home-manager.nixosModules.home-manager
 

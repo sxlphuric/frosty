@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -38,6 +38,7 @@
     gpu-screen-recorder-gtk
     kdePackages.kdeconnect-kde
     qalculate-qt
+    inputs.agenix.packages."${stdenv.hostPlatform.system}".default
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
