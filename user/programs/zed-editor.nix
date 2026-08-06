@@ -19,7 +19,7 @@
           "formatter" = {
             external = {
               command = "alejandra";
-              arguments = ["--quiet" "-"];
+              arguments = ["--quiet" "."];
             };
           };
         };

@@ -13,7 +13,7 @@
   },
   {
     "label": "Alejandra: Format all",
-    "command": "nix run nixpkgs#alejandra --quiet -"
+    "command": "nix run nixpkgs#alejandra --quiet ."
   },
   {
     "label": "NixOS: Collect garbage",
