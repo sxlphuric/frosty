@@ -20,6 +20,10 @@
     enable = true;
     remotePlay.openFirewall = true;
   };
+  programs.localsend = {
+    enable = true;
+    openFirewall = true;
+  };
 
   programs.gpu-screen-recorder.enable = true;
 
