@@ -7,8 +7,5 @@
       passwordFile = config.age.secrets.syncthing.path;
     };
     tray.enable = true;
-    settings = {
-
-    };
   };
 }
