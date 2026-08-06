@@ -50,6 +50,7 @@
         modules = [
           ./configuration.nix
           agenix.nixosModules.default
+          flatpak.nixosModules.default
 
           home-manager.nixosModules.home-manager
 

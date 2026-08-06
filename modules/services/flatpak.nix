@@ -1,7 +1,4 @@
-{inputs, ...}: {
-  imports = [
-    inputs.flatpak.nixosModules.default
-  ];
+{
   services.flatpak = {
     enable = true;
     remotes = {
