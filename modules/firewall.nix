@@ -17,5 +17,7 @@
 
     allowedTCPPortRanges = kdeConnectPortRanges;
     allowedUDPPortRanges = kdeConnectPortRanges;
+
+    logRefusedPackets = true;
   };
 }
