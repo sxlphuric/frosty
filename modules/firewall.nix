@@ -8,10 +8,12 @@
       }
     ];
     tailscaleInterface = config.services.tailscale.interfaceName;
+    syncthingSyncPort = 22000;
+    syncthingUDPDiscoveryPort = 21027;
   in {
     # Open ports in the firewall.
-    # allowedTCPPorts = [ ... ];
-    # allowedUDPPorts = [ ... ];
+    allowedTCPPorts = [ syncthingSyncPort ];
+    allowedUDPPorts = [ syncthingSyncPort syncthingUDPDiscoveryPort ];
 
     trustedInterfaces = [ tailscaleInterface ];
 
