@@ -47,7 +47,7 @@
       nixfx = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
-               modules = [
+        modules = [
           ./configuration.nix
           agenix.nixosModules.default
 
@@ -60,10 +60,9 @@
 
             home-manager.users.mushroom.imports = [./home.nix];
 
-
             nixpkgs.overlays = [
-                     inputs.obsidian-extensions.overlays.default
-                   ];
+              inputs.obsidian-extensions.overlays.default
+            ];
           }
         ];
       };
