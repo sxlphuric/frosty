@@ -8,6 +8,10 @@
     "command": "git add .; sudo nixos-rebuild switch --flake ."
   },
   {
+    "label": "NixOS Flakes: Stage changes, rebuild and configure bootloader",
+    "command": "git add .; sudo nixos-rebuild boot --flake . --install-bootloader"
+  },
+  {
     "label": "Alejandra: Format all",
     "command": "nix run nixpkgs#alejandra ."
   },
