@@ -77,6 +77,22 @@
         "type": "github"
       }
     },
+    "flatpak": {
+      "locked": {
+        "lastModified": 1782495309,
+        "narHash": "sha256-VHIqXC5eKeY4fNRMId7F1rg4sJhG/ZIX62TksPkTkVg=",
+        "owner": "in-a-dil-emma",
+        "repo": "declarative-flatpak",
+        "rev": "841b6e3ff33d73f63555ecca777b81369fe39350",
+        "type": "github"
+      },
+      "original": {
+        "owner": "in-a-dil-emma",
+        "ref": "latest",
+        "repo": "declarative-flatpak",
+        "type": "github"
+      }
+    },
     "helium": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -232,6 +248,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "flatpak": "flatpak",
         "helium": "helium",
         "home-manager": "home-manager_2",
         "nix4nvchad": "nix4nvchad",

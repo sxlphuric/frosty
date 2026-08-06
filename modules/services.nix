@@ -1,6 +1,7 @@
 {
   imports = [
     ./services/tailscale.nix
+    ./services/flatpak.nix
   ];
   # List services that you want to enable:
   #

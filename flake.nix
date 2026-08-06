@@ -30,6 +30,7 @@
       url = "github:karaolidis/nix-obsidian-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
   };
 
   outputs = {
@@ -39,6 +40,7 @@
     nix4nvchad,
     agenix,
     obsidian-extensions,
+    flatpak,
     ...
   } @ inputs: {
     nixosConfigurations = {
