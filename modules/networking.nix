@@ -5,15 +5,28 @@
 
     localCommands = let
       ipRules = [
-        { index = 54; priority = 10000; }
+        {
+          index = 54;
+          priority = 10000;
+        }
       ];
 
-      parseIpRule = { source ? "all", index, priority ? 32768, incoming ? true }: ''
-        ip rule add ${if incoming then "from" else "to"} ${source} lookup ${toString index} priority ${toString priority}
+      parseIpRule = {
+        source ? "all",
+        index,
+        priority ? 32768,
+        incoming ? true,
+      }: ''
+        ip rule add ${
+          if incoming
+          then "from"
+          else "to"
+        } ${source} lookup ${toString index} priority ${toString priority}
       '';
 
       parseIpRules = tables: builtins.concatStringsSep "\n" (map parseIpRule ipRules);
-    in parseIpRules ipRules;
+    in
+      parseIpRules ipRules;
 
     networkmanager = {
       enable = true;
@@ -26,8 +39,7 @@
               interface-name = "eno1";
               autoconnect = true;
             };
-            ipv4 =
-            {
+            ipv4 = {
               method = "manual";
               address1 = "192.168.10.11/28,192.168.10.1";
               dns = "192.168.10.1;1.1.1.1;1.0.0.1;";
