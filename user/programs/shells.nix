@@ -17,5 +17,22 @@
       '';
     };
   };
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    siteFunctions = {
+      run = ''
+        local cmd=(nix run "nixpkgs#$1" --)
+        shift
+        cmd+=("$@")
+        "${"$"}{cmd[@]}"
+      '';
+      shell = ''
+          local cmd=(nix shell)
+          for i in "$@"; do
+            cmd+=("nixpkgs#$i")
+          done
+          "${"$"}{cmd[@]}"
+      '';
+    };
+  };
 }
