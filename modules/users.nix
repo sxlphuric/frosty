@@ -10,7 +10,7 @@
     };
   in {
     "admin" = makeUser "John Admin" ["wheel"] [pkgs.wireshark];
-    "mushroom" = makeUser "Sulphuric" ["wheel"] []; #the big home manager got this
+    "mushroom" = makeUser "Sulphuric" ["wheel" "lpadmin"] []; #the big home manager got this
     "tung" = makeUser "Triple T Sahur" [] [pkgs.supertux];
   };
 
