@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvchad-config = {
-      url = "path:/home/mushroom/neovim";
+      url = "github:sxlphuric/nvchad-config";
       flake = false;
     };
     nix4nvchad = {

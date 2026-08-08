@@ -214,14 +214,17 @@
     "nvchad-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1785880179,
-        "narHash": "sha256-kUSVzCfIosjr15Xgatk4EFDfXqtBDGrKxk70rfi0U4U=",
-        "path": "/home/mushroom/neovim",
-        "type": "path"
+        "lastModified": 1785880015,
+        "narHash": "sha256-vhH3UF4hok4FePGV3u2FWUmzyUQchwyfzuP9pNO3CSQ=",
+        "owner": "sxlphuric",
+        "repo": "nvchad-config",
+        "rev": "581eec7b10ee4570c53a0e88c1b21be486b2e273",
+        "type": "github"
       },
       "original": {
-        "path": "/home/mushroom/neovim",
-        "type": "path"
+        "owner": "sxlphuric",
+        "repo": "nvchad-config",
+        "type": "github"
       }
     },
     "obsidian-extensions": {
