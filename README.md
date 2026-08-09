@@ -7,6 +7,6 @@ i MAYBE broke my endeavourOS install and can't be arsed to go fix it (this is th
 
 big todo: make an actually good readme (sxlphuric/replay-manager pelase help me)
 
-todo: check if I actually need any windows apps then install Windows
+todo: check if I actually need any windows apps then install WinPodx
 
 todo: install nix on the Mac mini with the nix darwin
