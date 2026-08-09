@@ -53,8 +53,10 @@
           flatpak.nixosModules.default
 
           home-manager.nixosModules.home-manager
-
+          
           {
+            # so I was looking at this code and genuinely just realized that this is literally just a module
+            # todo: separate into nixpkgs.overlays.nix and home-manager.config.nix
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {inherit inputs;};
