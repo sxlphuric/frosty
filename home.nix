@@ -8,4 +8,8 @@
 
   fonts.fontconfig.enable = true;
   xdg.enable = true;
+
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+  };
 }

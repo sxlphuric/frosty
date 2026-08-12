@@ -31,5 +31,12 @@
     kew
 
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+    tela-circle-icon-theme
+    bibata-cursors
+    bibata-cursors-translucent
+    utterly-round-plasma-style
+    darkly
+    kdePackages.qt6ct
   ];
 }
