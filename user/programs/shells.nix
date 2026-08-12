@@ -27,11 +27,11 @@
         "${"$"}{cmd[@]}"
       '';
       shell = ''
-          local cmd=(nix shell)
-          for i in "$@"; do
-            cmd+=("nixpkgs#$i")
-          done
-          "${"$"}{cmd[@]}"
+        local cmd=(nix shell)
+        for i in "$@"; do
+          cmd+=("nixpkgs#$i")
+        done
+        "${"$"}{cmd[@]}"
       '';
     };
   };

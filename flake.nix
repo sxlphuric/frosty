@@ -43,32 +43,52 @@
     flatpak,
     ...
   } @ inputs: {
-    nixosConfigurations = {
-      nixfx = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./configuration.nix
-          agenix.nixosModules.default
-          flatpak.nixosModules.default
+    nixosConfigurations = let
+      # change this to attr set (name) if we get more attributes
+      mkNixosConfig = name:
+        nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {inherit inputs;};
+          modules = [
+            ./${name}/hardware-configuration.nix
+            ./${name}/modules/audio.nix
+            ./${name}/modules/networking.nix
+            ./${name}/modules/boot.nix
 
-          home-manager.nixosModules.home-manager
-          
-          {
-            # so I was looking at this code and genuinely just realized that this is literally just a module
-            # todo: separate into nixpkgs.overlays.nix and home-manager.config.nix
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs;};
+            # common
+            ./modules/hardware.nix
+            ./modules/firewall.nix
+            ./modules/users.nix
+            ./modules/userland.nix
+            ./modules/sudo.nix
+            ./modules/services.nix
+            ./modules/programs.nix
 
-            home-manager.users.mushroom.imports = [./home.nix];
+            agenix.nixosModules.default
+            flatpak.nixosModules.default
+            home-manager.nixosModules.home-manager
+            {
+              system.stateVersion = "26.05";
+              nix.settings.experimental-features = ["nix-command" "flakes"];
+              networking.hostName = "${name}";
+              # so I was looking at this code and genuinely just realized that this is literally just a module
+              # todo: separate into nixpkgs.overlays.nix and home-manager.config.nix
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {inherit inputs;};
 
-            nixpkgs.overlays = [
-              inputs.obsidian-extensions.overlays.default
-            ];
-          }
-        ];
-      };
-    };
+              home-manager.users.mushroom.imports = [./home.nix];
+
+              nixpkgs.overlays = [
+                inputs.obsidian-extensions.overlays.default
+              ];
+            }
+          ];
+        };
+
+    in {
+      nixfx = mkNixosConfig "nixfx";
+      mushroom-machine = mkNixosConfig "mushroom-machine";
+     };
   };
 }
