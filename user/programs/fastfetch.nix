@@ -6,9 +6,9 @@
         type = "small";
         source = "";
         color = {
-          "1" = "light_magenta";
-          "2" = "light_blue";
-          "3" = "light_cyan";
+          "1" = "";
+          "2" = "";
+          "3" = "";
           "4" = "";
           "5" = "";
           "6" = "";
@@ -145,7 +145,7 @@
         }
         {
           type = "uptime";
-          key = "{#light_magenta}up ";
+          key = "{#light_cyan}up ";
           keyIcon = "󰅐";
           format = "{days}d {hours}h {minutes}m";
         }
@@ -170,7 +170,7 @@
         {
           type = "wm";
           keyIcon = "󰘔";
-          key = "{#light_magenta}wm ";
+          key = "{#light_cyan}wm ";
           detectPlugin = true;
           format = "{pretty-name}";
         }
