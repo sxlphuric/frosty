@@ -85,10 +85,9 @@
             }
           ];
         };
-
     in {
       nixfx = mkNixosConfig "nixfx";
       mushroom-machine = mkNixosConfig "mushroom-machine";
-     };
+    };
   };
 }
