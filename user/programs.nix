@@ -40,5 +40,6 @@
     darkly
     kdePackages.qt6ct
     osu-lazer-bin
+    oshu
   ];
 }
