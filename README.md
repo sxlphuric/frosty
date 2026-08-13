@@ -80,48 +80,6 @@ sudo nixos-rebuild boot --flake .#nixfx --install-bootloader
 ```
 Finally, reboot your system!
 
-### Installing to /etc/nixos
-
-> **Note:**
-> Any `git` issues you get running this configuration are not my problem. I don't personally run this configuration and I don't know how to fix it.
-
-#### 1. Cloning the repository
-
-Clone the repository to your local machine. This can be done with
-
-```fish
-# Go to /etc
-cd /etc
-
-# Clone the repository
-sudo nix-shell "<nixpkgs>" -A pkg --run "git clone https://github.com/sxlphuric/frosty"
-
-# Go into the repository's folder
-cd frosty
-```
-
-#### 2. Installation
-
-Run this command to install the configuration. I recommend installing `nixfx` as `mushroom-machine` is a configuration made specifically for my Chromebook.
-
-If you're **sure** you want to install `mushroom-machine`, switch all instances of `nixfx` to mushroom-machine in the commands below.
-
-```fish
-# Update hardware configuration (DO NOT skip this or your machine will boot into rescue mode)
-sudo cp /etc/nixos/hardware-configuration.nix nixfx
-
-# Backup /etc/nixos
-sudo mv /etc/nixos /etc/nixos.old
-
-# Move frosty to /etc/nixos
-cd ..
-sudo mv frosty nixos
-
-# Install
-sudo nixos-rebuild boot --flake /etc/nixos#nixfx --install-bootloader
-```
-Finally, reboot your system!
-
 ### Post-install
 
 To have a consistent theme, enable DankMaterialShell in `modules/programs.nix`. Then, add your wallpaper and fiddle around in the DMS settings until it looks good. Finally, turn it off.
