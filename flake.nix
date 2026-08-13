@@ -54,9 +54,10 @@
             ./${name}/modules/audio.nix
             ./${name}/modules/networking.nix
             ./${name}/modules/boot.nix
+            ./${name}/modules/hardware.nix
+            ./${name}/extra-config.nix
 
             # common
-            ./modules/hardware.nix
             ./modules/firewall.nix
             ./modules/users.nix
             ./modules/userland.nix

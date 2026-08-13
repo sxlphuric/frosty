@@ -20,12 +20,18 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/302064d1-b333-477a-b7e8-49c3d0569342";
     fsType = "ext4";
+    options = ["defaults" "noatime" "ssd"];
   };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/B32C-035E";
     fsType = "vfat";
-    options = ["fmask=0077" "dmask=0077"];
+    options = ["noatime" "fmask=0077" "dmask=0077"];
+  };
+  fileSystems."/tmp" = {
+    device = "tmpfs";
+    fsType = "tmpfs";
+    options = ["defaults" "noatime" "mode=1777" "size=512M"];
   };
 
   swapDevices = [];

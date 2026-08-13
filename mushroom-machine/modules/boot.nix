@@ -2,13 +2,14 @@
   # Bootloader.
 
   boot.loader = {
-    efi.canTouchEfiVariables = true;
-
+    efi.canTouchEfiVariables = false;
+    timeout = 5;
     grub = {
       enable = true;
       efiSupport = true;
       device = "nodev";
       useOSProber = false;
+      efiInstallAsRemovable = true;
     };
   };
 
