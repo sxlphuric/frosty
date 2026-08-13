@@ -11,6 +11,11 @@
       alejandra
     ];
 
+    extensions = [
+      "nix"
+      "zed-charmed-icons"
+    ];
+
     mutableUserSettings = false;
     userSettings = {
       languages = {
@@ -18,8 +23,8 @@
           language_servers = ["nixd"];
           "formatter" = {
             external = {
-              command = "alejandra";
-              arguments = ["--quiet" "."];
+              command = "nix";
+              arguments = ["run" "nixpkgs#alejandra" "--" "--quiet" "."];
             };
           };
         };
@@ -53,9 +58,15 @@
       buffer_font_family = "JetBrainsMono Nerd Font";
       buffer_font_size = 15;
       theme = {
+        # change DankShell to Ayu if DMS wasnt set up
         mode = "system";
-        light = "Ayu Light";
-        dark = "Ayu Dark";
+        light = "DankShell Light";
+        dark = "DankShell Dark";
+      };
+      icon_theme = {
+        mode = "system";
+        light = "Light Charmed Icons";
+        dark = "Soft Charmed Icons";
       };
     };
   };
