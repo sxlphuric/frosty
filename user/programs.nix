@@ -19,6 +19,7 @@
     ./programs/obsidian.nix
     ./programs/nvchad.nix
     ./programs/sober.nix
+    ./programs/niri.nix
   ];
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
