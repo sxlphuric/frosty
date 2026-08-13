@@ -39,5 +39,6 @@
     utterly-round-plasma-style
     darkly
     kdePackages.qt6ct
+    osu-lazer-bin
   ];
 }
