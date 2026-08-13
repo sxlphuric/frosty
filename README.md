@@ -2,7 +2,7 @@
 
 ### Frosty
 
-![NixOSIcon](https://github.com/sxlphuric/nixfx-nixos-config/blob/main/assets/icon.png?raw=true)
+<img src="https://github.com/sxlphuric/nixfx-nixos-config/blob/main/assets/icon.png?raw=true" width="256"/>
 
 
 **Yet another generic NixOS Config**
