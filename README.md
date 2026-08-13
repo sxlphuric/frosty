@@ -10,7 +10,6 @@
 
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/sxlphuric/nixfx-nixos-config?style=flat)
 ![Stars](https://img.shields.io/github/stars/sxlphuric/nixfx-nixos-config?style=flat)
-<!-- ![CI](https://img.shields.io/github/actions/workflow/status/sxlphuric/nixfx-nixos-config/rust.yml?label=CI&style=flat) -->
 
 [Installation](#Installing) • [Lore](#Lore) • [Structure](#Structure)
 
