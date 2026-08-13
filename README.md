@@ -3,6 +3,18 @@
 This is like my tuff NixOS config
 (tuff right?)
 
+## things to do:
+
+first install: mention the flake you want eg 
+
+`sudo nixos-rebuild switch --flake .#nixfx`
+
+also for the theming, enable DMS, set your wallpaper inside it and mess around with theme settings until it looks good
+
+then disable it
+
+do NOT change qt_qpa_platform theme
+
 ## nixfx lore
 i MAYBE broke my endeavourOS install and can't be arsed to go fix it (this is the second time) so i guess im stuck here
 
