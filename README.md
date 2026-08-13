@@ -2,15 +2,15 @@
 
 ### Frosty
 
-<img src="https://github.com/sxlphuric/nixfx-nixos-config/blob/main/assets/icon.png?raw=true" width="256"/>
+<img src="https://github.com/sxlphuric/frosty/blob/main/assets/icon.png?raw=true" width="256"/>
 
 
 **Yet another generic NixOS Config**
 
 *Powered by flakes, hopes and dreams*
 
-![Commit Activity](https://img.shields.io/github/commit-activity/m/sxlphuric/nixfx-nixos-config?style=flat)
-![Stars](https://img.shields.io/github/stars/sxlphuric/nixfx-nixos-config?style=flat)
+![Commit Activity](https://img.shields.io/github/commit-activity/m/sxlphuric/frosty?style=flat)
+![Stars](https://img.shields.io/github/stars/sxlphuric/frosty?style=flat)
 
 [Installation](#Installing) • [Lore](#Lore) • [Structure](#Structure)
 
@@ -55,10 +55,10 @@ Clone the repository to your local machine. This can be done with
 cd
 
 # Clone the repository
-nix-shell "<nixpkgs>" -A pkg --run "git clone https://github.com/sxlphuric/nixfx-nixos-config"
+nix-shell "<nixpkgs>" -A pkg --run "git clone https://github.com/sxlphuric/frosty"
 
-# Rename local folder (optional)
-mv nixfx-nixos-config nixos-config
+# Rename local folder
+mv frosty nixos-config
 
 # Go into the repository's folder
 cd nixos-config
@@ -94,10 +94,10 @@ Clone the repository to your local machine. This can be done with
 cd /etc
 
 # Clone the repository
-sudonix-shell "<nixpkgs>" -A pkg --run "git clone https://github.com/sxlphuric/nixfx-nixos-config"
+sudo nix-shell "<nixpkgs>" -A pkg --run "git clone https://github.com/sxlphuric/frosty"
 
 # Go into the repository's folder
-cd nixfx-nixos-config
+cd frosty
 ```
 
 #### 2. Installation
@@ -113,9 +113,9 @@ sudo cp /etc/nixos/hardware-configuration.nix nixfx
 # Backup /etc/nixos
 sudo mv /etc/nixos /etc/nixos.old
 
-# Move nixfx-nixos-config to /etc/nixos
+# Move frosty to /etc/nixos
 cd ..
-sudo mv nixfx-nixos-config nixos
+sudo mv frosty nixos
 
 # Install
 sudo nixos-rebuild boot --flake /etc/nixos#nixfx --install-bootloader
