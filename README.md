@@ -2,7 +2,8 @@
 
 ### Frosty
 
-![ReplayManagerIcon](https://github.com/sxlphuric/replay-manager/blob/main/assets/icon_256.png?raw=true)
+![NixOSIcon](https://github.com/sxlphuric/nixfx-nixos-config/blob/main/assets/icon.png?raw=true)
+
 
 **Yet another generic NixOS Config**
 
