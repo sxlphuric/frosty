@@ -19,7 +19,7 @@
 
 ## Overview
 
-Frosty is my take on a NixOS configuration built with **flakes**. This is just a configuration I use on my personal devices, with the goal being having an all-in-one configuration.
+Frosty is my take on a NixOS configuration built with **flakes**. This is just a setup I use on my personal devices, with the goal being having an all-in-one and simple design.
 
 ### Key Features
 
