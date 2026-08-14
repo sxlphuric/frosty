@@ -21,6 +21,22 @@
         "type": "github"
       }
     },
+    "cb-ucm-conf-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784850344,
+        "narHash": "sha256-eARLyVzMI84SRNkts8l9jjloWfnZ5gH+0EhFxNa0EY4=",
+        "owner": "WeirdTreeThing",
+        "repo": "alsa-ucm-conf-cros",
+        "rev": "a46dd193ab81ed71c4465453f5297f21e413769f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "WeirdTreeThing",
+        "repo": "alsa-ucm-conf-cros",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -251,6 +267,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "cb-ucm-conf-src": "cb-ucm-conf-src",
         "flatpak": "flatpak",
         "helium": "helium",
         "home-manager": "home-manager_2",

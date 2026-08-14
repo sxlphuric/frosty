@@ -31,6 +31,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
+    cb-ucm-conf-src = {
+      url = "github:WeirdTreeThing/alsa-ucm-conf-cros";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -41,6 +45,7 @@
     agenix,
     obsidian-extensions,
     flatpak,
+    cb-ucm-conf-src,
     ...
   } @ inputs: {
     nixosConfigurations = let

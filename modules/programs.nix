@@ -48,6 +48,9 @@
     qalculate-qt
     inputs.agenix.packages."${stdenv.hostPlatform.system}".default
     vinegar
+    pavucontrol
+    pwvucontrol
+    wiremix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
