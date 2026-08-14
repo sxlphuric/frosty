@@ -145,5 +145,3 @@ home.nix - Home configuration and environment variables
 ```
 
 ## TODO
-- Find a good README icon and remove the replay manager one
-- Rename repo to frosty
