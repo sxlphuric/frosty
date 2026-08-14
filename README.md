@@ -80,9 +80,38 @@ sudo nixos-rebuild boot --flake .#nixfx --install-bootloader
 ```
 Finally, reboot your system!
 
-### Post-install
+## Post-install
 
-To have a consistent theme, enable DankMaterialShell in `modules/programs.nix`. Then, add your wallpaper and fiddle around in the DMS settings until it looks good. Finally, turn it off.
+### Theming
+
+#### General app theming
+
+To have a consistent theme, enable DankMaterialShell in `modules/programs.nix`. Then, add your wallpaper and fiddle around in the DMS settings until it looks good. Then, press "apply QT settings" and "apply GTK settings". Finally, turn it off.
+
+#### Zen Browser theming
+
+To theme Zen Browser, you need to link your DMS generated theme to the Zen Browser theme directory.
+
+```fish
+PROFILE_DIR="$(find "$HOME/.config/zen" -maxdepth 1 -type d -name "*Default Profile" 2>/dev/null | head -n 1)"
+[ -z "$PROFILE_DIR" ] && exit
+mkdir -p "$PROFILE_DIR/chrome"
+ln -sf "$HOME/.config/DankMaterialShell/zen.css" "$PROFILE_DIR/chrome/userChrome.css"
+```
+Then, you need to add this snippet to your `userChrome.css` to remove the shadow around the viewport.
+
+```css
+#tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer {
+  --zen-big-shadow: none !important;
+}
+```
+Finally, we need to tweak some settings in `about:config` to fix theming.
+- Set `browser.tabs.inTitlebar` to `0` to enable system titlebar theming
+- Set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` to enable userChrome.css theming
+- Set `widget.gtk.non-native-titlebar-buttons` to `true` to enable titlebar button theming
+- Set `zen.theme.content-element-separation` to `1` to minimize Zen viewport borders while keeping corner roundness
+
+
 
 ## Structure
 ```
