@@ -1,6 +1,10 @@
 {pkgs, ...}:{
   # Hardware/firmware fixes
+  ## Audio
   hardware.firmware = [pkgs.sof-firmware];
+  boot.extraModprobeConfig = ''
+    options snd-intel-dspcfg dsp_driver=3
+  '';
 
   # QOL improvements
   ## Remove TPM to avoid 90 second boot timeout
