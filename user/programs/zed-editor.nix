@@ -18,6 +18,7 @@
 
     mutableUserSettings = false;
     userSettings = {
+      window_decorations = "server";
       languages = {
         Nix = {
           language_servers = ["nixd"];
