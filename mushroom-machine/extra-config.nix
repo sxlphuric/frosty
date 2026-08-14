@@ -3,6 +3,7 @@
   hardware.firmware = [pkgs.sof-firmware];
 
   # QOL improvements
+  ## Remove TPM to avoid 90 second boot timeout
   boot.blacklistedKernelModules = [
       "tpm"
       "tpm_tis"
@@ -10,12 +11,8 @@
       "tpm_crb"
   ];
 
-  systemd.services = {
-    "tpm2.target".wantedBy = lib.mkForce [];
-    "dev-tpmrm0.device".wantedBy = lib.mkForce [];
-    "dev-tpm0.device".wantedBy = lib.mkForce [];
-    "systemd-tpm2-setup-early.service".wantedBy = lib.mkForce [];
-  };
+  systemd.tpm2.enable = false;
+  boot.initrd.systemd.tpm2.enable = false;
 
   # Performance improvements
   ## Store journald logs in RAM
