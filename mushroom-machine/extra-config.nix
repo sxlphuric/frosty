@@ -18,6 +18,7 @@
   };
 
   # Performance improvements
+  ## Store journald logs in RAM
   services.journald = {
     storage = "volatile";
     extraConfig =
@@ -26,6 +27,7 @@
     '';
   };
 
+  ## Tune sysctl settings
   boot.kernel.sysctl = {
     "vm.vfs_cache_pressure" = 75;
     "vm.dirty_background_ratio" = 3;
@@ -34,6 +36,7 @@
     "vm.swappiness" = 180;
   };
 
+  ## Add zram swap to double 4gb ram into 8gb
   zramSwap = {
     enable = true;
     algorithm = "zstd";
@@ -43,8 +46,10 @@
     swapDevices = 1;
   };
 
+  ## weekly service to remove unused blocks from emmc
   services.fstrim.enable = true;
 
+  ## make emmc use mq-deadline scheduler
   services.udev.extraRules = ''
     ACTION=="add|change", SUBSYSTEM=="block", ENV{DEVTYPE}=="disk", KERNEL=="mmcblk*", ATTR{queue/scheduler}="mq-deadline"
   '';
