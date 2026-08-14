@@ -1,4 +1,4 @@
-{pkgs, lib, ...}:{
+{pkgs, ...}:{
   # Hardware/firmware fixes
   hardware.firmware = [pkgs.sof-firmware];
 
