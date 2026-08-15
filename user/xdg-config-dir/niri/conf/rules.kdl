@@ -6,7 +6,7 @@
 
 // Rules for all windows
 window-rule {
-  geometry-corner-radius 20 
+  geometry-corner-radius 20
   clip-to-geometry true
   default-column-width { proportion 0.5; }
   background-effect {
@@ -151,4 +151,3 @@ layer-rule {
   block-out-from "screencast"
   opacity 0.2
 }
-

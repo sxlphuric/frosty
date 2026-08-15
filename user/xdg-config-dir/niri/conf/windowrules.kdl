@@ -34,4 +34,3 @@ window-rule {
 layer-rule {
 	match namespace="quickshell:bar"
 }
-

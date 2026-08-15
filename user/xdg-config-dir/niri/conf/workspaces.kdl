@@ -29,4 +29,3 @@ window-rule {
   open-floating true
   open-on-workspace "scratch"
 }
-
