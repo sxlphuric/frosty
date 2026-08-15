@@ -90,13 +90,13 @@ binds {
   }
 
   // #"Actions"
-  XF86HomePage { spawn "zen-browser"; }
+  XF86HomePage { spawn "zen-twilight"; }
 
   XF86Explorer { spawn "dolphin"; }
 
   XF86Calculator { spawn "qalculate-qt"; }
 
-  XF86Mail { spawn "zen-browser" "--new-instance" "https://mail.proton.me"; }
+  XF86Mail { spawn "zen-twilight" "--new-instance" "https://mail.proton.me"; }
 
   XF86Tools { spawn "kitty" "-e" "kew"; }
 
@@ -127,7 +127,7 @@ binds {
 
   // #"Applications"
   Mod+Return { spawn "kitty"; }
-  Mod+W { spawn "zen-browser"; }
+  Mod+W { spawn "zen-twilight"; }
 
   // #"Scratchpad Applications"
   Mod+E hotkey-overlay-title="Floating terminal" { spawn "nscratch" "-m" "-a" "-id" "floating-term"; }
