@@ -177,3 +177,4 @@ home.nix - Home configuration and environment variables
 - Add README for mushroom-machine chromebook specific configuration (audio drivers, performance etc.)
 - Finish pixel theme
 - Finish porting niri config
+- Replace ls with eza
