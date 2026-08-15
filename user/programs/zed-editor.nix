@@ -14,6 +14,7 @@
     extensions = [
       "nix"
       "zed-charmed-icons"
+      "zed-kdl"
     ];
 
     mutableUserSettings = false;
