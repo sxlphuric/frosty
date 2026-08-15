@@ -1,64 +1,44 @@
 // Clipboard
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-
+spawn-at-startup bash -c "wl-paste --watch cliphist store &"
 // Add NVIDIA
 // spawn-sh-at-startup "nvidia-settings -a '[gpu:0]/GPUPowerMizerMode=1'"
-
 // Start polkit
 // spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
-
 // Cool sidebar shyt
-spawn-at-startup "niri-sidebar" "listen"
-
+spawn-at-startup niri-sidebar listen
 // UR Eyes
-spawn-at-startup "safeeyes"
-
+spawn-at-startup safeeyes
 // Nirius utilities
-spawn-at-startup "niriusd"
-
+spawn-at-startup niriusd
 // Session manager
-spawn-at-startup "nirinit" "--save-interval" "300"
-
+spawn-at-startup nirinit --save-interval "300"
 // no my calendori
-spawn-at-startup "dcal"
-
+spawn-at-startup dcal
 // activitywatch
 // localhost:5600 in browser
 // spawn-at-startup "awatcher"
-
 // stickywindowsd.service
 // spawn-at-startup "niri-float-sticky"
-spawn-sh-at-startup "nsticky"
-
+spawn-sh-at-startup nsticky
 // We LOVEE niri-switch
-spawn-sh-at-startup "niri-switch-daemon"
-
+spawn-sh-at-startup niri-switch-daemon
 // screen time daemon
 spawn-sh-at-startup "niri-screen-time -daemon"
-
 // Discord WITHOUT the vc overlay
 // spawn-at-startup "equibop"
-
-
 // tellel tel,ly telem merkuro-calendargram
 // spawn-at-startup "app2unit" "AyuGram"
-
 // Waydroid
 // spawn-sh-at-startup "waydroid session start"
-
 // Steam
 // spawn-at-startup "steam"
-
 // Floating terminal
-spawn-at-startup "kitty" "--app-id=floating-term"
-
+spawn-at-startup kitty "--app-id=floating-term"
 // Easyeffects (audio mixer)
 // spawn-sh-at-startup "easyeffects --gapplication-service"
-
 // Replay feature
 // spawn-at-startup "app2unit" "replayservice"
-
 // i fix app2unit
 spawn-sh-at-startup "systemctl --user import-environment QT_QPA_PLATFORMTHEME QT_QUICK_CONTROLS_STYLE QT_QUICK_CONTROLS_MATERIAL_THEME LANG WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP"
 spawn-sh-at-startup "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-spawn-at-startup "sh" "-c" "eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); export SSH_AUTH_SOCK"
+spawn-at-startup sh -c "eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); export SSH_AUTH_SOCK"
