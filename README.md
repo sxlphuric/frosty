@@ -178,3 +178,4 @@ home.nix - Home configuration and environment variables
 - Finish pixel theme
 - Finish porting niri config
 - Replace ls with eza
+- install dankshell plugins: declaratively
