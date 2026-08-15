@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   lib,
   inputs,
@@ -26,9 +27,9 @@ in {
   programs.vim.enable = true;
 
   programs.niri.enable = true;
-  services.displayManager.defaultSession = lib.mkForce "niri";
+  services.displayManager.defaultSession = "niri";
   programs.dms-shell = {
-    enable = true;
+    enable = config.programs.niri.enable;
     systemd.target = "niri.service";
   };
 
