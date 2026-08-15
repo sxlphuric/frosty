@@ -62,11 +62,11 @@ binds {
    // Night mode toggle
   Mod+Shift+N allow-when-locked=true {
     spawn "dms" "ipc" "call" "night" "toggle";
-  } 
+  }
 
   Mod+K hotkey-overlay-title="Anyrun" {
     spawn "anyrun"
-  } 
+  }
   Alt+Tab hotkey-overlay-title="Application Switcher" {
     spawn "niri-switch"
   }
@@ -202,7 +202,7 @@ binds {
 
   // Scratchpad???
   Mod+Ctrl+S { spawn "nirius" "scratchpad-toggle"; }
-  Mod+S { spawn "nirius" "scratchpad-show"; } 
+  Mod+S { spawn "nirius" "scratchpad-show"; }
 
   Mod+Shift+S { screenshot show-pointer=false; }
   Ctrl+Print { screenshot-screen show-pointer=false; }

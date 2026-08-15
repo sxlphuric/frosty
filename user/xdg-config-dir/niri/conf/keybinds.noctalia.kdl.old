@@ -64,7 +64,7 @@ binds {
   XF86Tools { spawn "kitty" "-e" "kew"; }
 
   XF86Search { spawn "niri-window-info"; }
-  
+
   // #"Replays"
   Mod+Shift+G repeat=false hotkey-overlay-title="Save Replay" { spawn "createreplay" "-SIGUSR1"; }
 
@@ -76,7 +76,7 @@ binds {
 
 
 
-  Mod+Shift+Slash { 
+  Mod+Shift+Slash {
     // show-hotkey-overlay
     spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin" "togglePanel" "keybind-cheatsheet"
   }
@@ -94,7 +94,7 @@ binds {
 
   Mod+M { close-window; }
   // Mod+Q { close-window; }
-  
+
   // #"Focus"
   Mod+Left  { focus-column-left; }
   Mod+Down  { focus-window-down; }
@@ -166,7 +166,7 @@ binds {
   Mod+Ctrl+7 { move-column-to-workspace 7; }
   Mod+Ctrl+8 { move-column-to-workspace 8; }
   Mod+Ctrl+9 { move-column-to-workspace 9; }
-  
+
   // #"Tiling"
   Mod+BracketLeft  { consume-or-expel-window-left; }
   Mod+BracketRight { consume-or-expel-window-right; }
@@ -197,7 +197,7 @@ binds {
 
   // Scratchpad???
   // Mod+Ctrl+S { spawn "nirius" "scratchpad-toggle"; }
-  // Mod+S { spawn "nirius" "scratchpad-show"; } 
+  // Mod+S { spawn "nirius" "scratchpad-show"; }
   // #"Capture"
 
   Mod+Ctrl+P hotkey-overlay-title="Toggle Screen Recording" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:screen-recorder" "toggle"; }

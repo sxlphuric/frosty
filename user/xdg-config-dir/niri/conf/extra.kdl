@@ -1,4 +1,4 @@
-config-notification { 
+config-notification {
 	disable-failed
 }
 
@@ -22,4 +22,3 @@ recent-windows {
         Alt+Shift+grave { previous-window filter="app-id"; }
     }
 }
-
