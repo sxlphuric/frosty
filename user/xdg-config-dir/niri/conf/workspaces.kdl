@@ -4,7 +4,7 @@ workspace entertainment
 workspace scratch
 // School
 window-rule {
-    match app-id=notion-calendar-widget
+    match app-id="notion-calendar-widget"
     match app-id="Lotion"
     match app-id="ticktick"
     match app-id="org.kde.merkuro.calendar"
@@ -13,14 +13,14 @@ window-rule {
 }
 // Entertainment
 window-rule {
-    match app-id=steam
+    match app-id="discord"
     match app-id="org.vinegarhq.Sober"
     match app-id="org.example.MultiSober"
     open-on-workspace "entertainment"
 }
 // Scratchpad
 window-rule {
-    match app-id=discord
+    match app-id="discord"
     match app-id="equibop"
     match app-id="floating-term"
     open-floating true
