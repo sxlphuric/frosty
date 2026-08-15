@@ -174,5 +174,5 @@ home.nix - Home configuration and environment variables
 ```
 
 ## TODO
-- Finish setting up the keyd configuration on Chromebook
 - Add README for mushroom-machine chromebook specific configuration (audio drivers, performance etc.)
+- Finish pixel theme
