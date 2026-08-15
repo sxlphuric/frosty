@@ -1,4 +1,4 @@
-{lib, ...}:{
+{lib, ...}: {
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -26,7 +26,8 @@
     enable = true;
     keyboards = {
       cros = {
-        ids = [ "k:18d1:502b"
+        ids = [
+          "k:18d1:502b"
           "k:18d1:5044"
           "k:18d1:503d"
           "k:18d1:505b"
@@ -38,7 +39,8 @@
           "k:18d1:5057"
           "k:18d1:503c"
           "k:18d1:5050"
-          "k:18d1:5030" ];
+          "k:18d1:5030"
+        ];
         settings = {
           main = {
             f1 = "back";
@@ -63,8 +65,8 @@
             volumedown = "volumedown";
             volumeup = "volumeup";
 
-            f13="coffee";
-            sleep="sleep";
+            f13 = "coffee";
+            sleep = "sleep";
           };
           meta = {
             f1 = "f1";
@@ -132,7 +134,6 @@
           };
         };
       };
-    }
-    ;
+    };
   };
 }

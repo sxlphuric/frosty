@@ -5,22 +5,20 @@ in {
     enable = true;
     checkConfig = false;
     settings = {
-
       input = {
         touchpad = {
-        tap = {};
-        natural-scroll = {};
+          tap = {};
+          natural-scroll = {};
         };
-              focus-follows-mouse._props.max-scroll-amount="5%";
+        focus-follows-mouse._props.max-scroll-amount = "5%";
         keyboard.numlock = {};
       };
-
 
       hotkey-overlay.skip-at-startup = {};
 
       binds = {
         "Mod+Shift+Slash".show-hotkey-overlay = {};
-        
+
         "Mod+T" = {
           _props.hotkey-overlay-title = "Open a Terminal: kitty";
           spawn = "kitty";
@@ -28,10 +26,10 @@ in {
       };
     };
     extraConfig = ''
-    include "${niriConfigDirectory}/dms/colors.kdl"
-    include "${niriConfigDirectory}/dms/layout.kdl"
-    include "${niriConfigDirectory}/dms/alttab.kdl"
-    include "${niriConfigDirectory}/dms/binds.kdl"
+      include "${niriConfigDirectory}/dms/colors.kdl"
+      include "${niriConfigDirectory}/dms/layout.kdl"
+      include "${niriConfigDirectory}/dms/alttab.kdl"
+      include "${niriConfigDirectory}/dms/binds.kdl"
     '';
   };
 }

@@ -1,12 +1,11 @@
-
 {
   # QOL improvements
   ## Remove TPM to avoid 90 second boot timeout
   boot.blacklistedKernelModules = [
-      "tpm"
-      "tpm_tis"
-      "tpm_tis_core"
-      "tpm_crb"
+    "tpm"
+    "tpm_tis"
+    "tpm_tis_core"
+    "tpm_crb"
   ];
 
   systemd.tpm2.enable = false;
@@ -16,8 +15,7 @@
   ## Store journald logs in RAM
   services.journald = {
     storage = "volatile";
-    extraConfig =
-    ''
+    extraConfig = ''
       RuntimeMaxUse=64M
     '';
   };

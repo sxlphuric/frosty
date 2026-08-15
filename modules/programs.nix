@@ -5,20 +5,23 @@
   inputs,
   ...
 }: let
-  sddm-astronaut-themed = (pkgs.sddm-astronaut.override {
-  embeddedTheme = "pixel_sakura";
-  themeConfig = {
-    Font = "unscii";
-    # HeaderTextColor = "#d5c4a1";
-    # Background = "Backgrounds/your-custom-background.png";
-  };
-}).overrideAttrs (oldAttrs: {
-  installPhase = oldAttrs.installPhase + ''
-    chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
-    cp ${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/ScarletTree/contents/images_dark/5120x2880.png \
-      $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/your-custom-background.png
-  '';
-});
+  sddm-astronaut-themed =
+    (pkgs.sddm-astronaut.override {
+      embeddedTheme = "pixel_sakura";
+      themeConfig = {
+        Font = "unscii";
+        # HeaderTextColor = "#d5c4a1";
+        # Background = "Backgrounds/your-custom-background.png";
+      };
+    }).overrideAttrs (oldAttrs: {
+      installPhase =
+        oldAttrs.installPhase
+        + ''
+          chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
+          cp ${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/ScarletTree/contents/images_dark/5120x2880.png \
+            $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/your-custom-background.png
+        '';
+    });
 in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -52,33 +55,35 @@ in {
   # $ nix search wget
 
   # Packages (these are just installed, no preconfiguration
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    libreoffice-qt
-    kitty
-    git
-    mpv
-    most
-    awatcher
-    aw-server-rust
-    ticktick
-    kdePackages.filelight
-    kdePackages.kclock
-    gpu-screen-recorder-gtk
-    kdePackages.kdeconnect-kde
-    kdePackages.kamoso
-    kdePackages.keysmith
-    qalculate-qt
-    inputs.agenix.packages."${stdenv.hostPlatform.system}".default
-    vinegar
-    pavucontrol
-    pwvucontrol
-    wiremix
-    rubik
-    inter
-    kdePackages.qtmultimedia
-    unscii
-  ] ++ [sddm-astronaut-themed];
+  environment.systemPackages = with pkgs;
+    [
+      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      libreoffice-qt
+      kitty
+      git
+      mpv
+      most
+      awatcher
+      aw-server-rust
+      ticktick
+      kdePackages.filelight
+      kdePackages.kclock
+      gpu-screen-recorder-gtk
+      kdePackages.kdeconnect-kde
+      kdePackages.kamoso
+      kdePackages.keysmith
+      qalculate-qt
+      inputs.agenix.packages."${stdenv.hostPlatform.system}".default
+      vinegar
+      pavucontrol
+      pwvucontrol
+      wiremix
+      rubik
+      inter
+      kdePackages.qtmultimedia
+      unscii
+    ]
+    ++ [sddm-astronaut-themed];
 
   fonts.packages = [
     pkgs.unscii
