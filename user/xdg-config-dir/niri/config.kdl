@@ -1,0 +1,19 @@
+include "conf/env.kdl"
+include "conf/startup.kdl"
+include "conf/workspaces.kdl"
+include "conf/extra.kdl"
+include "conf/rules.kdl"
+include "conf/input.kdl"
+include "conf/output.kdl"
+include "conf/theme.kdl"
+include "conf/visual.kdl"
+include "conf/keybinds.kdl"
+
+// DMS
+include "dms/colors.kdl"
+include "dms/layout.kdl"
+include "dms/alttab.kdl"
+include "dms/outputs.kdl"
+include "dms/cursor.kdl"
+
+include "conf/theme-extra.kdl"

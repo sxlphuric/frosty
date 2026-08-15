@@ -1,0 +1,37 @@
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+	match title="Solanum"
+
+	open-floating true
+	opacity 0.8
+	shadow { off; }
+}
+
+// Games
+window-rule {
+	match app-id="org.vinegarhq.Sober"
+	open-floating true
+	open-fullscreen true
+}
+
+window-rule {
+	match title="MultiSober Manager"
+	open-floating true
+}
+
+
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+    default-column-width { proportion 0.75; }
+    open-on-workspace "default"
+}
+
+layer-rule {
+	match namespace="quickshell:bar"
+}
+

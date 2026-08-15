@@ -1,0 +1,208 @@
+binds {
+  // Mod-Shift-/, which is usually the same as Mod-?,
+  // shows a list of important hotkeys.
+
+  // #"Noctalia"
+  Mod+Ctrl+Tab { toggle-overview; }
+  Mod+Space hotkey-overlay-title="Application Launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+  Mod+N hotkey-overlay-title="Notification Center" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "notifications" "toggleHistory"; }
+  Mod+I hotkey-overlay-title="Settings" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
+  // #"System"
+  Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+  Mod+Shift+C hotkey-overlay-title="Control Center" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
+  Mod+Escape hotkey-overlay-title="Power Menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+  // #"Utilities"
+  Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
+  Mod+Shift+V hotkey-overlay-title="Clipboard Manager" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:clipper" "togglePanel"; }
+  Mod+P hotkey-overlay-title="Keybinds" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin" "togglePanel" "keybind-cheatsheet"; }
+  Mod+Ctrl+C hotkey-overlay-title="Calendar" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:weekly-calendar" "togglePanel"; }
+  Mod+Shift+U hotkey-overlay-title="Search unicode characters" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:unicode" "toggle"; }
+  Mod+A hotkey-overlay-title="AI assistant" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:assistant-panel" "toggle"; }
+  Mod+Y hotkey-overlay-title="Browse Wallpapers" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
+  // #"Media"
+  XF86AudioRaiseVolume allow-when-locked=true {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase";
+  }
+  XF86AudioLowerVolume allow-when-locked=true {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease";
+  }
+  XF86AudioMute allow-when-locked=true {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput";
+  }
+  /-XF86AudioMicMute allow-when-locked=true {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput";
+  }
+  Mod+Shift+Grave {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput";
+  }
+  /-MouseSide {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput";
+  }
+
+  // #"Monitor"
+
+  XF86MonBrightnessUp allow-when-locked=true {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase";
+  }
+   // You can override the default device for e.g. keyboards by adding the device name to the last param
+  XF86MonBrightnessDown allow-when-locked=true {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease";
+  }
+  Mod+Shift+N allow-when-locked=true {
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "nightLight" "toggle";
+  }
+
+  // #"Actions"
+  XF86HomePage { spawn "zen-browser"; }
+
+  XF86Explorer { spawn "dolphin"; }
+
+  XF86Calculator { spawn "qalculate-qt"; }
+
+  XF86Mail { spawn "zen-browser" "--new-instance" "https://mail.proton.me"; }
+
+  XF86Tools { spawn "kitty" "-e" "kew"; }
+
+  XF86Search { spawn "niri-window-info"; }
+  
+  // #"Replays"
+  Mod+Shift+G repeat=false hotkey-overlay-title="Save Replay" { spawn "createreplay" "-SIGUSR1"; }
+
+  F2 repeat=false hotkey-overlay-title="Save Replay (10s)" { spawn "createreplay" "-SIGRTMIN+1"; }
+
+  F12 repeat=false hotkey-overlay-title="Save Replay (30s)" { spawn "createreplay" "-SIGRTMIN+2"; }
+
+  Mod+Shift+B repeat=false hotkey-overlay-title="Save Replay (60s)" { spawn "createreplay" "-SIGRTMIN+3"; }
+
+
+
+  Mod+Shift+Slash { 
+    // show-hotkey-overlay
+    spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin" "togglePanel" "keybind-cheatsheet"
+  }
+
+
+  // Suggested binds for running programs: terminal, app launcher, screen locker.
+
+  // #"Applications"
+  Mod+Return { spawn "kitty"; }
+  Mod+W { spawn "zen-browser" "--new-window"; }
+
+  // #"Scratchpad Applications"
+  Mod+E hotkey-overlay-title="Floating terminal" { spawn "nscratch" "-m" "-a" "-id" "floating-term"; }
+  Mod+S hotkey-overlay-title="Floating discord" { spawn "nscratch" "-m" "-a" "-id" "equibop"; }
+
+  Mod+M { close-window; }
+  // Mod+Q { close-window; }
+  
+  // #"Focus"
+  Mod+Left  { focus-column-left; }
+  Mod+Down  { focus-window-down; }
+  Mod+Up    { focus-window-up; }
+  Mod+Right { focus-column-right; }
+
+  Mod+Home { focus-column-first; }
+  Mod+End  { focus-column-last; }
+
+  Mod+Shift+Left  { focus-monitor-left; }
+  Mod+Shift+Down  { focus-monitor-down; }
+  Mod+Shift+Up    { focus-monitor-up; }
+  Mod+Shift+Right { focus-monitor-right; }
+
+  Mod+Page_Down      { focus-workspace-down; }
+  Mod+Page_Up        { focus-workspace-up; }
+
+  Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+  Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+
+  Mod+WheelScrollRight      { focus-column-right; }
+  Mod+WheelScrollLeft       { focus-column-left; }
+
+  Mod+Shift+WheelScrollDown      { focus-column-right; }
+  Mod+Shift+WheelScrollUp        { focus-column-left; }
+
+  // #"Move"
+  Mod+Ctrl+Left  { move-column-left; }
+  Mod+Ctrl+Down  { move-window-down; }
+  Mod+Ctrl+Up    { move-window-up; }
+  Mod+Ctrl+Right { move-column-right; }
+
+  Mod+Ctrl+Home { move-column-to-first; }
+  Mod+Ctrl+End  { move-column-to-last; }
+
+  Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+  Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+  Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+  Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+
+  Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+  Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+
+  Mod+Shift+Page_Down { move-workspace-down; }
+  Mod+Shift+Page_Up   { move-workspace-up; }
+
+  Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+  Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+  Mod+Ctrl+WheelScrollRight { move-column-right; }
+  Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+  Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+  Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+  // #"Workspaces"
+  Mod+1 { focus-workspace 1; }
+  Mod+2 { focus-workspace 2; }
+  Mod+3 { focus-workspace 3; }
+  Mod+4 { focus-workspace 4; }
+  Mod+5 { focus-workspace 5; }
+  Mod+6 { focus-workspace 6; }
+  Mod+Ctrl+1 { move-column-to-workspace 1; }
+  Mod+Ctrl+2 { move-column-to-workspace 2; }
+  Mod+Ctrl+3 { move-column-to-workspace 3; }
+  Mod+Ctrl+4 { move-column-to-workspace 4; }
+  Mod+Ctrl+5 { move-column-to-workspace 5; }
+  Mod+Ctrl+6 { move-column-to-workspace 6; }
+  Mod+Ctrl+7 { move-column-to-workspace 7; }
+  Mod+Ctrl+8 { move-column-to-workspace 8; }
+  Mod+Ctrl+9 { move-column-to-workspace 9; }
+  
+  // #"Tiling"
+  Mod+BracketLeft  { consume-or-expel-window-left; }
+  Mod+BracketRight { consume-or-expel-window-right; }
+
+  Mod+Comma  { consume-window-into-column; }
+  Mod+Period { expel-window-from-column; }
+
+  Mod+R { switch-preset-column-width; }
+  Mod+Shift+R { switch-preset-window-height; }
+  Mod+Ctrl+R { reset-window-height; }
+
+  Mod+F { maximize-column; }
+  Mod+Shift+F { fullscreen-window; }
+  Mod+Ctrl+F { toggle-windowed-fullscreen; }
+
+  Mod+C { center-column; }
+  Mod+B { toggle-column-tabbed-display; }
+
+  Mod+Minus { set-column-width "-10%"; }
+  Mod+Equal { set-column-width "+10%"; }
+
+  Mod+Shift+Minus { set-window-height "-10%"; }
+  Mod+Shift+Equal { set-window-height "+10%"; }
+
+  Mod+D       { toggle-window-floating; }
+  Mod+Shift+D { switch-focus-between-floating-and-tiling; }
+  Mod+Ctrl+D hotkey-overlay-title="Make window sticky" { spawn "nsticky" "toggle-active"; }
+
+  // Scratchpad???
+  // Mod+Ctrl+S { spawn "nirius" "scratchpad-toggle"; }
+  // Mod+S { spawn "nirius" "scratchpad-show"; } 
+  // #"Capture"
+
+  Mod+Ctrl+P hotkey-overlay-title="Toggle Screen Recording" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:screen-recorder" "toggle"; }
+  Mod+Shift+S { screenshot show-pointer=false; }
+  Ctrl+Print { screenshot-screen show-pointer=false; }
+  Alt+Print { screenshot-window; }
+
+}

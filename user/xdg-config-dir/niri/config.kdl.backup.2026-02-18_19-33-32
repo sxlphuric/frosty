@@ -1,0 +1,16 @@
+include "./conf/extra.kdl"
+include "./conf/workspaces.kdl"
+include "./conf/startup.kdl"
+include "./conf/env.kdl"
+
+include "./conf/rules.kdl"
+
+include "./conf/visual.kdl"
+include "./conf/theme.kdl"
+include "./noctalia.kdl"
+include "./conf/theme-extra.kdl"
+
+include "./conf/output.kdl"
+include "./conf/input.kdl"
+include "./conf/keybinds.kdl"
+

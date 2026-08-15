@@ -1,0 +1,18 @@
+input {
+	keyboard {
+		xkb {
+			layout "custom"
+      options "caps:escape"
+		}
+    numlock
+	}
+	touchpad {
+		natural-scroll	
+    tap
+	}
+  mouse {
+    // accel-profile "flat"
+    accel-speed -1
+  }
+  focus-follows-mouse max-scroll-amount="0%"
+}
