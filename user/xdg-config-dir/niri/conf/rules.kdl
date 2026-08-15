@@ -51,19 +51,19 @@ window-rule {
 // Pop-ups
 window-rule {
     match app-id="org.vinegarhq.Sober" title="Servers"
-    // Sober Servers page    match app-id="zen$" title="^Picture-in-Picture$"
-    // Zen Browser Picture in Picture    match app-id="yad" title="Window Information"
-    // Window Information    match app-id="org.example.MultiSober"
-    // Withdrawal    match app-id="org.gnome.Solanum"
-    // Solanum    match app-id="com.gabm.satty"
+    match app-id="zen$" title="^Picture-in-Picture$"
+    match app-id="yad" title="Window Information"
+    match app-id="org.example.MultiSober"
+    match app-id="org.gnome.Solanum"
+    match app-id="com.gabm.satty"
     open-fullscreen false
     open-floating true
 }
 // Fullscreen
 window-rule {
     match app-id="Waydroid"
- // Waydroid    match app-id="qemu"
- // QEMU vms    open-fullscreen true
+    match app-id="qemu"
+    open-fullscreen true
 }
 // Games vrr
 window-rule {
@@ -89,7 +89,7 @@ window-rule {
 // Window informator size
 window-rule {
     match app-id="yad" title="Window Information"
-    // Window Information    min-width 500
+    min-width 500
     min-height 328
  //used to be 352
 }
@@ -114,11 +114,11 @@ window-rule {
 // Wallpaper blur for overview
 layer-rule {
     match namespace="dms:blurwallpaper"
- // DankMaterialShell blurred wallpaper layer    place-within-backdrop true
+    place-within-backdrop true
 }
 /-layer-rule {
-match namespace="^noctalia-wallpaper*" // Noctalia Shell overview layer
-place-within-backdrop true
+    match namespace="^noctalia-wallpaper*"
+    place-within-backdrop true
 }
 layer-rule {
     match namespace="discord-overlay"

@@ -5,24 +5,24 @@ workspace scratch
 // School
 window-rule {
     match app-id=notion-calendar-widget
- // Notion Calendar Widget    match app-id="Lotion"
- // Lotion    match app-id="ticktick"
- // Todoist    match app-id="org.kde.merkuro.calendar"
- // Merkuro Calendar    match app-id="com.danklinux.dankcalendar"
- // Dank Calendar (because it doesn't use less RAM)    open-on-workspace "productivity"
+    match app-id="Lotion"
+    match app-id="ticktick"
+    match app-id="org.kde.merkuro.calendar"
+    match app-id="com.danklinux.dankcalendar"
+    open-on-workspace "productivity"
 }
 // Entertainment
 window-rule {
     match app-id=steam
- // Steam    match app-id="org.vinegarhq.Sober"
- // Sober    match app-id="org.example.MultiSober"
- // Withdrawal    open-on-workspace "entertainment"
+    match app-id="org.vinegarhq.Sober"
+    match app-id="org.example.MultiSober"
+    open-on-workspace "entertainment"
 }
 // Scratchpad
 window-rule {
     match app-id=discord
-    // Discord/Equicord    match app-id="equibop"
-    // Equibop    match app-id="floating-term"
-    // Kitty floating terminal    open-floating true
+    match app-id="equibop"
+    match app-id="floating-term"
+    open-floating true
     open-on-workspace scratch
 }
