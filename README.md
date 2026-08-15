@@ -176,3 +176,4 @@ home.nix - Home configuration and environment variables
 ## TODO
 - Add README for mushroom-machine chromebook specific configuration (audio drivers, performance etc.)
 - Finish pixel theme
+- Finish porting niri config

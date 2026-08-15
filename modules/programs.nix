@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   inputs,
   ...
 }: let
@@ -24,8 +25,12 @@ in {
   # Programs (these are installed and CONFIGURED by nix and given bindings so you can configure them straight in the config.nix)
   programs.vim.enable = true;
 
-  programs.niri.enable = false;
-  programs.dms-shell.enable = false;
+  programs.niri.enable = true;
+  services.displayManager.defaultSession = lib.mkForce "niri";
+  programs.dms-shell = {
+    enable = true;
+    systemd.target = "niri.service";
+  };
 
   programs.fish.enable = true;
   programs.zsh.enable = true;
