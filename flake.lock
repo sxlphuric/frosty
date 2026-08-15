@@ -131,6 +131,26 @@
         "type": "github"
       }
     },
+    "hjem": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785929776,
+        "narHash": "sha256-qwppDYdtxqtDpI1iSp7bs8prOJ0KQSvhJchfROD04f0=",
+        "owner": "feel-co",
+        "repo": "hjem",
+        "rev": "b610953d0c56da6b28fd39c21bd193b88e91341c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "feel-co",
+        "repo": "hjem",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -270,6 +290,7 @@
         "cb-ucm-conf-src": "cb-ucm-conf-src",
         "flatpak": "flatpak",
         "helium": "helium",
+        "hjem": "hjem",
         "home-manager": "home-manager_2",
         "nix4nvchad": "nix4nvchad",
         "nixpkgs": "nixpkgs_2",

@@ -35,6 +35,10 @@
       url = "github:WeirdTreeThing/alsa-ucm-conf-cros";
       flake = false;
     };
+    hjem = {
+      url = "github:feel-co/hjem";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -46,6 +50,7 @@
     obsidian-extensions,
     flatpak,
     cb-ucm-conf-src,
+    hjem,
     ...
   } @ inputs: {
     nixosConfigurations = let
@@ -70,9 +75,12 @@
             ./modules/services.nix
             ./modules/programs.nix
 
+            ./hjem.nix
+
             agenix.nixosModules.default
             flatpak.nixosModules.default
             home-manager.nixosModules.home-manager
+            hjem.nixosModules.default
             {
               system.stateVersion = "26.05";
               nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -88,7 +96,8 @@
               nixpkgs.overlays = [
                 inputs.obsidian-extensions.overlays.default
               ];
-            }
+
+                          }
           ];
         };
     in {
