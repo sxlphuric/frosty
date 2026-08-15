@@ -179,3 +179,4 @@ home.nix - Home configuration and environment variables
 - Finish porting niri config
 - Replace ls with eza
 - install dankshell plugins: declaratively
+- port replay scripts and features
