@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   # Set your time zone.
   time.timeZone = "America/Toronto";
 
@@ -10,7 +10,11 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "sddm-astronaut-theme";
+    extraPackages = [pkgs.kdePackages.qtmultimedia];
+  };
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11

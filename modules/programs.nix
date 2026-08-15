@@ -2,7 +2,22 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  sddm-astronaut-themed = (pkgs.sddm-astronaut.override {
+  embeddedTheme = "pixel_sakura";
+  themeConfig = {
+    Font = "unscii";
+    # HeaderTextColor = "#d5c4a1";
+    # Background = "Backgrounds/your-custom-background.png";
+  };
+}).overrideAttrs (oldAttrs: {
+  installPhase = oldAttrs.installPhase + ''
+    chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
+    cp ${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/ScarletTree/contents/images_dark/5120x2880.png \
+      $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/your-custom-background.png
+  '';
+});
+in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -53,6 +68,14 @@
     pavucontrol
     pwvucontrol
     wiremix
+    rubik
+    inter
+    kdePackages.qtmultimedia
+    unscii
+  ] ++ [sddm-astronaut-themed];
+
+  fonts.packages = [
+    pkgs.unscii
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
