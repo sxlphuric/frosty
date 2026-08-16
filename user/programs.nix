@@ -41,5 +41,6 @@
     kdePackages.qt6ct
     osu-lazer-bin
     oshu
+    inputs.niri-scratchpad-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

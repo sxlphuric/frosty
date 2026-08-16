@@ -39,6 +39,10 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri-scratchpad-flake = {
+      url = "github:gvolpe/niri-scratchpad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -51,6 +55,7 @@
     flatpak,
     cb-ucm-conf-src,
     hjem,
+    niri-scratchpad-flake,
     ...
   } @ inputs: {
     nixosConfigurations = let
