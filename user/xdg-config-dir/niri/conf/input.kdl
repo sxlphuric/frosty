@@ -1,8 +1,8 @@
 input {
     keyboard {
         xkb {
-            layout custom
-            options caps:escape
+            layout "custom"
+            options "caps:escape"
         }
         numlock
     }

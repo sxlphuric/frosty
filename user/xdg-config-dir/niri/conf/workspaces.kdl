@@ -1,7 +1,7 @@
-workspace default
-workspace productivity
-workspace entertainment
-workspace scratch
+workspace "default"
+workspace "productivity"
+workspace "entertainment"
+workspace "scratch"
 // School
 window-rule {
     match app-id="notion-calendar-widget"
@@ -24,5 +24,5 @@ window-rule {
     match app-id="equibop"
     match app-id="floating-term"
     open-floating true
-    open-on-workspace scratch
+    open-on-workspace "scratch"
 }
