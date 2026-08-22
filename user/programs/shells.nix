@@ -16,6 +16,11 @@
         set -e NIX_SHELL_CMD
       '';
     };
+    shellAliases = {
+      ls = "eza";
+      la = "eza -la";
+      ll = "eza -l";
+    };
   };
   programs.zsh = {
     enable = true;
@@ -33,6 +38,11 @@
         done
         "${"$"}{cmd[@]}"
       '';
+    };
+    shellAliases = {
+      ls = "eza";
+      la = "eza -la";
+      ll = "eza -l";
     };
   };
 }

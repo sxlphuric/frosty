@@ -20,6 +20,7 @@
     ./programs/nvchad.nix
     ./programs/sober.nix
     ./programs/niri.nix
+    ./programs/eza.nix
   ];
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

@@ -176,7 +176,6 @@ home.nix - Home configuration and environment variables
 ## TODO
 - Add README for mushroom-machine chromebook specific configuration (audio drivers, performance etc.)
 - Finish pixel theme
-- Replace ls with eza
 - install dankshell plugins: declaratively
 - port replay scripts and features
 - make a PACKAGES directory
