@@ -86,7 +86,7 @@ Finally, reboot your system!
 
 #### General app theming
 
-To have a consistent theme, enable DankMaterialShell in `modules/programs.nix`. Then, add your wallpaper and fiddle around in the DMS settings until it looks good. Then, press "apply QT settings" and "apply GTK settings". Finally, turn it off.
+For your apps to have a consistent Material You theme, add your wallpaper and fiddle around in the DMS settings until it looks good. Then, press "apply QT settings" and "apply GTK settings". Finally, you can turn it off if using KDE.
 
 #### Zen Browser theming
 
@@ -106,10 +106,10 @@ Then, you need to add this snippet to your `userChrome.css` to remove the shadow
 }
 ```
 Finally, we need to tweak some settings in `about:config` to fix theming.
-- Set `browser.tabs.inTitlebar` to `0` to enable system titlebar theming
+- Set `browser.tabs.inTitlebar` to `0` to enable system titlebar theming (KDE)
 - Set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` to enable userChrome.css theming
-- Set `widget.gtk.non-native-titlebar-buttons` to `true` to enable titlebar button theming
-- Set `zen.theme.content-element-separation` to `1` to minimize Zen viewport borders while keeping corner roundness
+- Set `widget.gtk.non-native-titlebar-buttons` to `true` to enable titlebar button theming (KDE)
+- Set `zen.theme.content-element-separation` to `1` to minimize Zen viewport borders while keeping corner roundness (KDE)
 
 
 
