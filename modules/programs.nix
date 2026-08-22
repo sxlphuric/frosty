@@ -82,11 +82,13 @@ in {
       inter
       kdePackages.qtmultimedia
       unscii
+      nunito
     ]
     ++ [sddm-astronaut-themed];
 
   fonts.packages = [
     pkgs.unscii
+    pkgs.nunito
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
