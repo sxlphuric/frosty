@@ -3,6 +3,7 @@
     ./services/tailscale.nix
     ./services/flatpak.nix
     ./services/printing.nix
+    ./services/niri-polkit.nix
   ];
   # List services that you want to enable:
   #
