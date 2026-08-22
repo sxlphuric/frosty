@@ -1,4 +1,4 @@
-{pkgs,...}: {
+{pkgs, ...}: {
   imports = [
     ./user/services.nix
     ./user/programs.nix
@@ -16,19 +16,19 @@
   };
 
   gtk = {
-      enable = true;
-      theme = {
-        name = "adw-gtk3-dark";
-        package = pkgs.adw-gtk3;
-      };
-      cursorTheme = {
-        name = "Bibata-Modern-Ice-Right";
-        package = pkgs.bibata-cursors;
-      };
-      font = {
-        name = "Rubik Regular";
-        size = 10;
-        package = pkgs.rubik;
-      };
+    enable = true;
+    theme = {
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
+    };
+    cursorTheme = {
+      name = "Bibata-Modern-Ice-Right";
+      package = pkgs.bibata-cursors;
+    };
+    font = {
+      name = "Rubik Regular";
+      size = 10;
+      package = pkgs.rubik;
+    };
   };
 }
