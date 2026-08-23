@@ -45,5 +45,6 @@
     inputs.niri-scratchpad-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnome-solanum
     gnome-calendar
+    tty-clock
   ];
 }
