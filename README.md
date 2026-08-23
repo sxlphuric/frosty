@@ -106,10 +106,11 @@ Then, you need to add this snippet to your `userChrome.css` to remove the shadow
 }
 ```
 Finally, we need to tweak some settings in `about:config` to fix theming.
-- Set `browser.tabs.inTitlebar` to `0` to enable system titlebar theming (KDE)
+- Set `browser.tabs.inTitlebar` to `0` to disable client side decorations
 - Set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` to enable userChrome.css theming
-- Set `widget.gtk.non-native-titlebar-buttons` to `true` to enable titlebar button theming (KDE)
 - Set `zen.theme.content-element-separation` to `1` to minimize Zen viewport borders while keeping corner roundness (KDE)
+
+Don't forget to restart Zen for the DMS theme to apply
 
 
 
