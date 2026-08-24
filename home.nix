@@ -10,7 +10,6 @@
   xdg.enable = true;
 
   home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt6ct";
     QT_QPA_PLATFORM = "wayland";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
@@ -30,5 +29,9 @@
       size = 10;
       package = pkgs.rubik;
     };
+  };
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
   };
 }
