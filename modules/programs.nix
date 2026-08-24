@@ -83,6 +83,7 @@ in {
       kdePackages.qtmultimedia
       unscii
       nunito
+      kdiskmark
     ]
     ++ [sddm-astronaut-themed];
 
