@@ -9,9 +9,13 @@ input {
     touchpad {
         natural-scroll
         tap
+        dwt
+        click-method "clickfinger"
+        accel-profile "adaptive"
+        drag true
     }
     mouse {
-        // accel-profile "flat"
+        accel-profile "flat"
         accel-speed -1
     }
     focus-follows-mouse max-scroll-amount="0%"
