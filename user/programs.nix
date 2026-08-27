@@ -47,5 +47,6 @@
     gnome-solanum
     gnome-calendar
     tty-clock
+    arduino-ide
   ];
 }
