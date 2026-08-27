@@ -74,16 +74,12 @@ in {
       kdePackages.keysmith
       qalculate-qt
       inputs.agenix.packages."${stdenv.hostPlatform.system}".default
-      vinegar
       pavucontrol
-      pwvucontrol
-      wiremix
       rubik
       inter
       kdePackages.qtmultimedia
       unscii
       nunito
-      kdiskmark
       arp-scan
       nmap
     ]

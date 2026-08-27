@@ -30,19 +30,15 @@
     prismlauncher
     supertuxkart
 
-    equibop
     kew
 
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     tela-circle-icon-theme
     bibata-cursors
-    bibata-cursors-translucent
     utterly-round-plasma-style
     darkly
     kdePackages.qt6ct
-    osu-lazer-bin
-    oshu
     inputs.niri-scratchpad-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnome-solanum
     gnome-calendar
