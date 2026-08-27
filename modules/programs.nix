@@ -84,6 +84,8 @@ in {
       unscii
       nunito
       kdiskmark
+      arp-scan
+      nmap
     ]
     ++ [sddm-astronaut-themed];
 
