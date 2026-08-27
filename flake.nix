@@ -71,6 +71,7 @@
             ./${name}/modules/boot.nix
             ./${name}/modules/hardware.nix
             ./${name}/extra-config.nix
+            ./${name}/extra-packages.nix
 
             # common
             ./modules/firewall.nix
@@ -96,7 +97,10 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {inherit inputs;};
 
-              home-manager.users.mushroom.imports = [./home.nix];
+              home-manager.users.mushroom.imports = [
+                ./home.nix
+                ./${name}/extra-home-packages.nix
+              ];
 
               nixpkgs.overlays = [
                 inputs.obsidian-extensions.overlays.default
