@@ -1,9 +1,8 @@
 {pkgs}: {
   boot = {
-  plymouth.enable = true;
+    plymouth.enable = true;
 
-
-  # Use latest ZEN kernel.
-  kernelPackages = pkgs.linuxPackages_zen;
+    # Use latest ZEN kernel.
+    kernelPackages = pkgs.linuxPackages_zen;
   };
 }
