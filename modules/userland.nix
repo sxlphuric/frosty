@@ -19,7 +19,13 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "lafayette";
     variant = "";
+  };
+
+  services.xserver.xkb.extraLayouts.lafayette = {
+    description = "An ergonomic version of QWERTY for French programmers and typists";
+    languages = ["eng" "fra"];
+    symbolsFile = ../symbols/lafayette;
   };
 }
