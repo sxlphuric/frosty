@@ -80,6 +80,7 @@
             ./modules/sudo.nix
             ./modules/services.nix
             ./modules/programs.nix
+            ./modules/boot.nix
 
             ./hjem.nix
 
