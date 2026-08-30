@@ -16,7 +16,7 @@ input {
     }
     mouse {
         accel-profile "flat"
-        accel-speed -1
+        accel-speed 0
     }
     focus-follows-mouse max-scroll-amount="0%"
 }
