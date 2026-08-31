@@ -65,13 +65,13 @@
           system = "x86_64-linux";
           specialArgs = {inherit inputs;};
           modules = [
-            ./${name}/hardware-configuration.nix
-            ./${name}/modules/audio.nix
-            ./${name}/modules/networking.nix
-            ./${name}/modules/boot.nix
-            ./${name}/modules/hardware.nix
-            ./${name}/extra-config.nix
-            ./${name}/extra-packages.nix
+            ./hosts/${name}/hardware-configuration.nix
+            ./hosts/${name}/modules/audio.nix
+            ./hosts/${name}/modules/networking.nix
+            ./hosts/${name}/modules/boot.nix
+            ./hosts/${name}/modules/hardware.nix
+            ./hosts/${name}/extra-config.nix
+            ./hosts/${name}/extra-packages.nix
 
             # common
             ./modules/firewall.nix
@@ -100,7 +100,7 @@
 
               home-manager.users.mushroom.imports = [
                 ./home.nix
-                ./${name}/extra-home-packages.nix
+                ./hosts/${name}/extra-home-packages.nix
               ];
 
               nixpkgs.overlays = [
