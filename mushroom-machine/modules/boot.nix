@@ -34,12 +34,11 @@ in {
     loader = {
       efi.canTouchEfiVariables = false;
       timeout = 0;
-      grub = {
+      systemd-boot = {
         enable = true;
-        efiSupport = true;
-        device = "nodev";
-        useOSProber = false;
-        efiInstallAsRemovable = true;
+        edk2-uefi-shell.enable = true;
+        editor = false;
+        configurationLimit = 50;
       };
     };
     plymouth = {
