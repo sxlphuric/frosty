@@ -33,12 +33,14 @@ in {
   boot = {
     loader = {
       efi.canTouchEfiVariables = false;
+      efi.efiSysMountPoint = "/efi";
       timeout = 0;
       systemd-boot = {
         enable = true;
         edk2-uefi-shell.enable = true;
         editor = false;
         configurationLimit = 50;
+        xbootldrMountPoint = "/boot";
       };
     };
     plymouth = {

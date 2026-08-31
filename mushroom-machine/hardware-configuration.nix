@@ -29,6 +29,12 @@
     options = ["fmask=0077" "dmask=0077" "noatime"];
   };
 
+  fileSystems."/efi" = {
+    device = "/dev/disk/by-uuid/503D-674A";
+    fsType = "vfat";
+    options = ["noatime"];
+  };
+
   swapDevices = [];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
