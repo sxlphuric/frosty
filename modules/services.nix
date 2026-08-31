@@ -4,6 +4,7 @@
     ./services/flatpak.nix
     ./services/printing.nix
     ./services/niri-polkit.nix
+    ./services/nohang.nix
   ];
   # List services that you want to enable:
   #

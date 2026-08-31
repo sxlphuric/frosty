@@ -1,0 +1,3 @@
+{
+  services.nohang.enable = true;
+}
