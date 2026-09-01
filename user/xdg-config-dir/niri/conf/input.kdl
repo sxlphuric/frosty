@@ -9,7 +9,6 @@ input {
     touchpad {
         natural-scroll
         tap
-        dwt
         click-method "clickfinger"
         accel-profile "adaptive"
         drag true
