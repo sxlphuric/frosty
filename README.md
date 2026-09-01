@@ -179,4 +179,3 @@ home.nix - Home configuration and environment variables
 - Finish pixel theme
 - install dankshell plugins: declaratively
 - port replay scripts and features
-- make a PACKAGES directory
