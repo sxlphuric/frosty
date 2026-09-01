@@ -43,6 +43,10 @@
       url = "github:gvolpe/niri-scratchpad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plymouth-theme-chromeos = {
+      url = "path:packages/plymouth-theme-chromeos/";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -56,6 +60,7 @@
     cb-ucm-conf-src,
     hjem,
     niri-scratchpad-flake,
+    plymouth-theme-chromeos,
     ...
   } @ inputs: {
     nixosConfigurations = let

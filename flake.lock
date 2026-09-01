@@ -327,6 +327,22 @@
         "type": "github"
       }
     },
+    "plymouth-theme-chromeos": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "packages/plymouth-theme-chromeos/",
+        "type": "path"
+      },
+      "original": {
+        "path": "packages/plymouth-theme-chromeos/",
+        "type": "path"
+      },
+      "parent": []
+    },
     "root": {
       "inputs": {
         "agenix": "agenix",
@@ -340,6 +356,7 @@
         "nixpkgs": "nixpkgs_2",
         "nvchad-config": "nvchad-config",
         "obsidian-extensions": "obsidian-extensions",
+        "plymouth-theme-chromeos": "plymouth-theme-chromeos",
         "zen-browser": "zen-browser"
       }
     },
