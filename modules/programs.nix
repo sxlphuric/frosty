@@ -57,7 +57,6 @@ in {
   # Packages (these are just installed, no preconfiguration
   environment.systemPackages = with pkgs;
     [
-      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       libreoffice-qt
       kitty
       git
@@ -73,13 +72,11 @@ in {
       kdePackages.kamoso
       qalculate-qt
       inputs.agenix.packages."${stdenv.hostPlatform.system}".default
-      pavucontrol
       rubik
       inter
       kdePackages.qtmultimedia
       unscii
       nunito
-      arp-scan
       nmap
     ]
     ++ [sddm-astronaut-themed];
