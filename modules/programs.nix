@@ -71,7 +71,6 @@ in {
       gpu-screen-recorder-gtk
       kdePackages.kdeconnect-kde
       kdePackages.kamoso
-      kdePackages.keysmith
       qalculate-qt
       inputs.agenix.packages."${stdenv.hostPlatform.system}".default
       pavucontrol

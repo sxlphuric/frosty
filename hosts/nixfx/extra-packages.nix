@@ -1,3 +1,6 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [kdiskmark];
+  environment.systemPackages = with pkgs; [
+    kdiskmark
+    kdePackages.keysmith
+  ];
 }
