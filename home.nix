@@ -11,7 +11,7 @@
 
   home.sessionVariables = {
     QT_QPA_PLATFORM = "wayland";
-    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    ELECTRON_OZONE_PLATFORM_HINT = "x11";
   };
 
   gtk = {
