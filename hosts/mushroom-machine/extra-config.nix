@@ -13,12 +13,10 @@
 
   # Performance improvements
   ## Store journald logs in RAM
-  services.journald = {
-    storage = "volatile";
-    extraConfig = ''
-      RuntimeMaxUse=64M
-    '';
-  };
+  services.journald.settings.Journal = {
+      RuntimeMaxUse = "64M";
+      Storage = "volatile";
+    };
 
   ## Tune sysctl settings
   boot.kernel.sysctl = {
