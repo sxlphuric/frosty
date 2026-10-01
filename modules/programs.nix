@@ -22,6 +22,7 @@
             $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/your-custom-background.png
         '';
     });
+    primary = config.networking.hostName == "nixfx";
 in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -41,7 +42,7 @@ in {
 
   programs.gamemode.enable = true;
   programs.steam = {
-    enable = true;
+    enable = primary;
     remotePlay.openFirewall = true;
   };
   programs.localsend = {
@@ -64,7 +65,6 @@ in {
       most
       awatcher
       aw-server-rust
-      ticktick
       kdePackages.filelight
       kdePackages.kclock
       gpu-screen-recorder-gtk
@@ -77,9 +77,8 @@ in {
       kdePackages.qtmultimedia
       unscii
       nunito
-      nmap
     ]
-    ++ [sddm-astronaut-themed];
+    ++ [sddm-astronaut-themed] ++ (if primary then with pkgs; [ticktick nmap] else []);
 
   fonts.packages = [
     pkgs.unscii
