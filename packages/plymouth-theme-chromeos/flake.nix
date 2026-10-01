@@ -9,18 +9,18 @@
     packages = builtins.mapAttrs (system: pkgs: {
       plymouth-theme-chromeos = pkgs.stdenvNoCC.mkDerivation {
         pname = "plymouth-theme-chromeos";
-        version = "acf6d2f";
+        version = "8e274a0";
 
         src = pkgs.fetchFromGitHub {
-          owner = "e9x";
+          owner = "sxlphuric";
           repo = "plymouth-theme-chromeos";
-          rev = "acf6d2fcb1b89aeb34d018a4817642dee9c278c5";
-          hash = "sha256-7MN5/T8SDzusg+JvP59up+Vbq7/AjoR1dRdxNibXHUM=";
+          rev = "8e274a0f14d15088a0e55004e255b4b1bb270edc";
+          hash = "sha256-wQMEwIgYdhCgjphtxpwXMXnYrUUTSTSuoPe9miAexZo=";
         };
 
         postPatch = ''
           # Remove not needed files
-          rm README.md LICENSE
+          rm README.md
         '';
 
         dontBuild = true;
@@ -28,7 +28,7 @@
         installPhase = ''
           runHook preInstall
           mkdir -p $out/share/plymouth/themes/chromeos
-          cp chromeos/* $out/share/plymouth/themes/chromeos
+          cp * $out/share/plymouth/themes/chromeos
           find $out/share/plymouth/themes/ -name \*.plymouth -exec sed -i "s@\/usr\/@$out\/@" {} \;
           runHook postInstall
         '';
