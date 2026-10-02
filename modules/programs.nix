@@ -22,7 +22,7 @@
             $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/your-custom-background.png
         '';
     });
-    primary = config.networking.hostName == "nixfx";
+  primary = config.networking.hostName == "nixfx";
 in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -78,7 +78,12 @@ in {
       unscii
       nunito
     ]
-    ++ [sddm-astronaut-themed] ++ (if primary then with pkgs; [ticktick nmap] else []);
+    ++ [sddm-astronaut-themed]
+    ++ (
+      if primary
+      then with pkgs; [ticktick nmap]
+      else []
+    );
 
   fonts.packages = [
     pkgs.unscii
