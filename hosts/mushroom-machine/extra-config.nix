@@ -14,9 +14,9 @@
   # Performance improvements
   ## Store journald logs in RAM
   services.journald.settings.Journal = {
-      RuntimeMaxUse = "64M";
-      Storage = "volatile";
-    };
+    RuntimeMaxUse = "64M";
+    Storage = "volatile";
+  };
 
   ## Tune sysctl settings
   boot.kernel.sysctl = {
@@ -44,4 +44,5 @@
   services.udev.extraRules = ''
     ACTION=="add|change", SUBSYSTEM=="block", ENV{DEVTYPE}=="disk", KERNEL=="mmcblk*", ATTR{queue/scheduler}="mq-deadline"
   '';
+  nixpkgs.config.android_sdk.accept_license = true;
 }
