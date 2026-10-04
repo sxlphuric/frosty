@@ -5,6 +5,7 @@
     ./services/printing.nix
     ./services/niri-polkit.nix
     ./services/nohang.nix
+    ./services/crossmacro.nix
   ];
   # List services that you want to enable:
   #
