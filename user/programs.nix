@@ -44,5 +44,6 @@
     gnome-calendar
     tty-clock
     arduino-ide
+    krita
   ];
 }
