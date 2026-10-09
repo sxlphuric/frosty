@@ -118,6 +118,7 @@
 
               nixpkgs.config.permittedUnfreePackages = [
                 "airtame-application-4.15.0"
+                "xmind-26.05.01106-202608091931"
               ];
             }
           ];

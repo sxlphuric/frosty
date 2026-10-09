@@ -45,5 +45,6 @@
     tty-clock
     arduino-ide
     krita
+    xmind
   ];
 }
