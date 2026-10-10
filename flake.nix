@@ -79,6 +79,7 @@
             ./hosts/${name}/extra-packages.nix
 
             # common
+            ./generation-config.nix
             ./modules/firewall.nix
             ./modules/users.nix
             ./modules/userland.nix
@@ -94,31 +95,11 @@
             home-manager.nixosModules.home-manager
             hjem.nixosModules.default
             {
-              system.stateVersion = "26.05";
-              nix.settings.experimental-features = ["nix-command" "flakes"];
               networking.hostName = "${name}";
-              # so I was looking at this code and genuinely just realized that this is literally just a module
-              # todo: separate into nixpkgs.overlays.nix and home-manager.config.nix
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {inherit inputs;};
 
               home-manager.users.mushroom.imports = [
                 ./home.nix
                 ./hosts/${name}/extra-home-packages.nix
-              ];
-
-              nixpkgs.overlays = [
-                inputs.obsidian-extensions.overlays.default
-              ];
-
-              nixpkgs.config.permittedInsecurePackages = [
-                "olm-3.2.16" #for matrix cleints
-              ];
-
-              nixpkgs.config.permittedUnfreePackages = [
-                "airtame-application-4.15.0"
-                "xmind-26.05.01106-202608091931"
               ];
             }
           ];
