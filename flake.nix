@@ -68,7 +68,7 @@
       mkNixosConfig = name:
         nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = {inherit inputs;};
+          specialArgs = {inherit inputs; inherit name;};
           modules = [
             ./hosts/${name}/hardware-configuration.nix
             ./hosts/${name}/modules/audio.nix
@@ -95,12 +95,6 @@
             home-manager.nixosModules.home-manager
             hjem.nixosModules.default
             {
-              networking.hostName = "${name}";
-
-              home-manager.users.mushroom.imports = [
-                ./home.nix
-                ./hosts/${name}/extra-home-packages.nix
-              ];
             }
           ];
         };
