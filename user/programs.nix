@@ -45,6 +45,8 @@
     tty-clock
     arduino-ide
     krita
-    xmind
+    # xmind
+
+    wl-mirror
   ];
 }
