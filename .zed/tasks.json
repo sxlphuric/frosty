@@ -21,6 +21,6 @@
   },
   {
     "label": "NixOS Flakes: Update inputs",
-    "command": "sudo nix flake update"
+    "command": "nix flake update"
   }
 ]
