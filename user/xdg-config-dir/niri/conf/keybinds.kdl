@@ -34,6 +34,9 @@ binds {
     Mod+P hotkey-overlay-title="Notepad" {
         spawn "dms" "ipc" "call" "notepad" "toggle"
     }
+    Ctrl+Alt+T {
+        spawn "kitty" "-e" "tty-clock" "-scBC4"
+    }
     Mod+Ctrl+C hotkey-overlay-title="Calendar" {
         spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:weekly-calendar" "togglePanel"
     }
