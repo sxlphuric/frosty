@@ -28,4 +28,6 @@
     languages = ["eng" "fra"];
     symbolsFile = ../symbols/lafayette;
   };
+
+  console.font = ../assets/unscii-16-full.psf;
 }
