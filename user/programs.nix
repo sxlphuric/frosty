@@ -28,12 +28,7 @@
     nerd-fonts.jetbrains-mono
     maple-mono.NF-unhinted
 
-    prismlauncher
-    supertuxkart
-
     kew
-
-    inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     tela-circle-icon-theme
     bibata-cursors
@@ -44,10 +39,8 @@
     gnome-solanum
     gnome-calendar
     tty-clock
-    arduino-ide
-    krita
     # xmind
-
+    imv
     wl-mirror
     kdePackages.keysmith
 

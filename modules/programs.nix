@@ -61,7 +61,6 @@ in {
   # Packages (these are just installed, no preconfiguration
   environment.systemPackages = with pkgs;
     [
-      libreoffice-qt
       kitty
       git
       mpv
