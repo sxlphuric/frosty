@@ -2,6 +2,7 @@
   imports = [
     ./generation-config/home-manager.nix
     ./generation-config/nixpkgs.nix
+    ./generation-config/options.nix
   ];
 
   system.stateVersion = "26.05";
