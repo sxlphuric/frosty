@@ -86,6 +86,10 @@ in {
       if primary
       then with pkgs; [ticktick nmap]
       else []
+    ) ++ (
+      if config.update_outofspace
+      then []
+      else with pkgs; [libreoffice-qt]
     );
 
   fonts.packages = [

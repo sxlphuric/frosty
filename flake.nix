@@ -70,6 +70,14 @@
           system = "x86_64-linux";
           specialArgs = {inherit inputs; inherit name;};
           modules = [
+         { 
+specialisation = {
+        "iNeedDiskSpace".configuration = {
+          config.update_outofspace = true;
+        };
+      };
+         }
+
             ./hosts/${name}/hardware-configuration.nix
             ./hosts/${name}/modules/audio.nix
             ./hosts/${name}/modules/networking.nix

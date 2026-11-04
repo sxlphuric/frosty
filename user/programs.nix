@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [
@@ -48,5 +49,13 @@
     # xmind
 
     wl-mirror
-  ];
+    kdePackages.keysmith
+
+  ] ++ (if config.update_outofspace then [] else with pkgs; [
+    krita
+    arduino-ide
+    inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
+    supertuxkart
+    prismlauncher
+  ]);
 }
