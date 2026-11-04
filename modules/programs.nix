@@ -32,10 +32,13 @@ in {
 
   programs.niri.enable = true;
   services.displayManager.defaultSession = "niri";
-  programs.dms-shell = {
+  programs.dux-shell = {
     enable = config.programs.niri.enable;
     systemd.target = "niri.service";
   };
+  # programs.dux-files.enable = true;
+  programs.dux-search.enable = true;
+  programs.dux-calendar.enable = true;
 
   programs.fish.enable = true;
   programs.zsh.enable = true;
