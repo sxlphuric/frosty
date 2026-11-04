@@ -79,6 +79,7 @@ in {
       kdePackages.qtmultimedia
       unscii
       nunito
+      dix
     ]
     ++ [sddm-astronaut-themed]
     ++ (
