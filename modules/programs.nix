@@ -60,8 +60,17 @@ in {
   # $ nix search wget
 
   # Packages (these are just installed, no preconfiguration
+  #
+  #
+
+  virtualisation.waydroid = {
+    enable = true;
+    package = pkgs.waydroid-nftables;
+  };
+
   environment.systemPackages = with pkgs;
     [
+      wl-clipboard
       kitty
       git
       mpv
