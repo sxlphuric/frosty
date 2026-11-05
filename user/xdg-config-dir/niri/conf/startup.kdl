@@ -13,7 +13,7 @@ spawn-at-startup "niriusd"
 // Session manager
 spawn-at-startup "nirinit" "--save-interval" "300"
 // no my calendori
-spawn-at-startup "dcal"
+// spawn-at-startup "dcal"
 // activitywatch
 // localhost:5600 in browser
 // spawn-at-startup "awatcher"
@@ -29,7 +29,7 @@ spawn-sh-at-startup "niri-screen-time -daemon"
 // tellel tel,ly telem merkuro-calendargram
 // spawn-at-startup "app2unit" "AyuGram"
 // Waydroid
-// spawn-sh-at-startup "waydroid session start"
+spawn-sh-at-startup "waydroid session start"
 // Steam
 // spawn-at-startup "steam"
 // Floating terminal
