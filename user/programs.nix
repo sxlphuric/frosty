@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   config,
+  update_outofspace,
   ...
 }: {
   imports = [
@@ -44,7 +45,7 @@
     wl-mirror
     kdePackages.keysmith
 
-  ] ++ (if config.update_outofspace then [] else with pkgs; [
+  ] ++ (if update_outofspace then [] else with pkgs; [
     krita
     arduino-ide
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default

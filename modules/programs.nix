@@ -3,6 +3,7 @@
   pkgs,
   lib,
   inputs,
+  update_outofspace,
   ...
 }: let
   sddm-astronaut-themed =
@@ -87,7 +88,7 @@ in {
       then with pkgs; [ticktick nmap]
       else []
     ) ++ (
-      if config.update_outofspace
+      if update_outofspace
       then []
       else with pkgs; [libreoffice-qt]
     );

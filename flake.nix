@@ -65,18 +65,13 @@
   } @ inputs: {
     nixosConfigurations = let
       # change this to attr set (name) if we get more attributes
+      update_outofspace = false;
       mkNixosConfig = name:
         nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = {inherit inputs; inherit name;};
+          specialArgs = {inherit inputs; inherit name; inherit update_outofspace;};
           modules = [
-         { 
-specialisation = {
-        "iNeedDiskSpace".configuration = {
-          config.update_outofspace = true;
-        };
-      };
-         }
+            ./generation-config.nix
 
             ./hosts/${name}/hardware-configuration.nix
             ./hosts/${name}/modules/audio.nix
@@ -87,7 +82,6 @@ specialisation = {
             ./hosts/${name}/extra-packages.nix
 
             # common
-            ./generation-config.nix
             ./modules/firewall.nix
             ./modules/users.nix
             ./modules/userland.nix
