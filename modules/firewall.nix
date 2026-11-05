@@ -21,5 +21,16 @@
     allowedUDPPortRanges = kdeConnectPortRanges;
 
     logRefusedPackets = true;
+
+    # waydroid firewall configuration
+    filterForward = true;
+    extraForwardRules = ''
+      iifname "waydroid0" accept
+    '';
+
+    extraInputRules = ''
+      iifname "waydroid0" udp dport { 53, 67 } accept
+      iifname "waydroid0" tcp dport 53 accept
+    '';
   };
 }
