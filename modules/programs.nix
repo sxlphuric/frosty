@@ -75,6 +75,7 @@ in {
 
   environment.systemPackages = with pkgs;
     [
+      zellij
       waydroid-helper 
       wl-clipboard
       kitty
