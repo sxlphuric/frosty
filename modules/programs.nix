@@ -98,6 +98,7 @@ in {
       nunito
       libqalculate
       dix
+      inputs.sung.packages."${stdenv.hostPlatform.system}".default
     ]
     ++ [sddm-astronaut-themed]
     ++ (

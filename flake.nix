@@ -47,6 +47,10 @@
       url = "path:packages/plymouth-theme-chromeos/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sung = {
+      url = "path:packages/sung/";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -61,6 +65,7 @@
     hjem,
     niri-scratchpad-flake,
     plymouth-theme-chromeos,
+    sung,
     ...
   } @ inputs: {
     nixosConfigurations = let
